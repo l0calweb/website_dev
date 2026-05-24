@@ -1,0 +1,17 @@
+Local demo images downloaded from Unsplash photo download pages and optimized for mobile.
+
+Food images stored in assets/:
+- margherita.jpg — Unsplash photo Z-vPhsDBYhI
+- diavola.jpg — Unsplash photo __MJduQELx8
+- burrata.jpg — Unsplash photo 22Vt7JIf7ZI
+- funghi.jpg — Unsplash photo NslkeZ_CY4I
+- verdure.jpg — Unsplash photo rUrtOhmzv-s
+- ragu.jpg — Unsplash photo 84qvBiHrWgg
+- gnocchi.jpg — Unsplash photo Etsdv1OFgEo
+- bruschetta.jpg — Unsplash photo oiBsS-7fmHM
+- salad.jpg — Unsplash photo 6oNkl84pB4g
+- tiramisu.jpg — Unsplash photo ikyvQMc4ePA
+- panna.jpg — Unsplash photo dDHZKYISxso
+
+All restaurant data, menu text, prices, reviews and business contact information are fictional demo content.
+For a real client, replace all photos and text with client-approved material.

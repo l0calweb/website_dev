@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUNA 13 — cocktail / vinyl / late bar</title>
+  <meta name="description" content="LUNA 13 je cocktail & vinyl bar z avtorskimi koktajli, večeri z DJ seti, rezervacijami miz in poznonočnim ambientom." />
+  <meta name="theme-color" content="#09070f" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <aside class="rail" aria-label="Site rail">
+    <a class="brand" href="#top"><span>LUNA</span><b>13</b></a>
+    <nav class="rail-nav">
+      <a href="#drinks" data-i18n="navDrinks">Drinks</a>
+      <a href="#agenda" data-i18n="navAgenda">Agenda</a>
+      <a href="#room" data-i18n="navRoom">Room</a>
+      <a href="#book" data-i18n="navBook">Book</a>
+    </nav>
+    <div class="rail-note">18:00—02:00</div>
+  </aside>
+
+  <header class="mobile-head">
+    <a class="mobile-brand" href="#top">LUNA <span>13</span></a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false"><i></i><i></i></button>
+  </header>
+
+  <div class="mobile-nav">
+    <a href="#drinks" data-i18n="navDrinksMobile">Drinks</a>
+    <a href="#agenda" data-i18n="navAgendaMobile">Agenda</a>
+    <a href="#room" data-i18n="navRoomMobile">Room</a>
+    <a href="#book" data-i18n="navBookMobile">Book</a>
+  </div>
+
+  <div class="language-switcher" aria-label="Language switcher">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn active" data-lang="sl">SL</button>
+    <button class="lang-btn" data-lang="it">IT</button>
+  </div>
+
+  <main id="top">
+    <section class="poster-hero">
+      <div class="hero-photo-slice">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=2200&q=84" alt="Dark cocktail bar interior" />
+      </div>
+
+      <div class="poster-grid">
+        <div class="poster-code">NIGHT-013 / LJUBLJANA</div>
+        <h1>
+          <span>NO</span>
+          <span>RUSH</span>
+          <span>JUST</span>
+          <span>SIGNAL</span>
+        </h1>
+        <p class="poster-lead" data-i18n="heroLead">
+          Cocktail & vinyl bar za temne mize, počasne pogovore, signature pijače in noči, ki se ne začnejo z “kam gremo naprej?”.
+        </p>
+        <a class="square-cta" href="#book" data-i18n="heroCta">Rezerviraj mizo</a>
+      </div>
+
+      <div class="signal-panel">
+        <div>
+          <small data-i18n="openLabel">nocoj odprto</small>
+          <strong>18:00—02:00</strong>
+        </div>
+        <div>
+          <small data-i18n="soundLabel">sound</small>
+          <strong>VINYL / SOUL / DISCO</strong>
+        </div>
+        <div>
+          <small data-i18n="tableLabel">mize</small>
+          <strong data-i18n="tableText">2—6 oseb</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <div class="manifesto-line">
+        <span data-i18n="manifesto1">nizka luč</span>
+        <span data-i18n="manifesto2">kratek meni</span>
+        <span data-i18n="manifesto3">dober led</span>
+        <span data-i18n="manifesto4">počasen večer</span>
+      </div>
+    </section>
+
+    <section class="split-story" id="room">
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1800&q=84" alt="Bar counter" />
+      </div>
+      <div class="story-text">
+        <p class="section-index">01 / ROOM</p>
+        <h2 data-i18n="roomTitle">Bar brez svetlih miz in brez naključnega playlist hrupa.</h2>
+        <p data-i18n="roomText">
+          LUNA 13 je postavljen kot nočni prostor: manj dekoracije, več atmosfere. Meni je razdeljen po občutku, ne po dolgem seznamu sestavin.
+        </p>
+      </div>
+    </section>
+
+    <section class="drinks" id="drinks">
+      <div class="drinks-head">
+        <p class="section-index">02 / COCKTAILS</p>
+        <h2 data-i18n="drinksTitle">Meni kot frekvenca.</h2>
+      </div>
+
+      <div class="drink-board">
+        <button class="drink-row active" data-drink="spritz">
+          <span>01</span>
+          <strong>Lunar Spritz</strong>
+          <em data-i18n="drinkMood1">fresh / citrus</em>
+          <b>€9.50</b>
+        </button>
+        <button class="drink-row" data-drink="ember">
+          <span>02</span>
+          <strong>Midnight Ember</strong>
+          <em data-i18n="drinkMood2">smoky / deep</em>
+          <b>€11.00</b>
+        </button>
+        <button class="drink-row" data-drink="negroni">
+          <span>03</span>
+          <strong>Red Negroni</strong>
+          <em data-i18n="drinkMood3">bitter / elegant</em>
+          <b>€10.00</b>
+        </button>
+        <button class="drink-row" data-drink="velvet">
+          <span>04</span>
+          <strong>Velvet Afterglow</strong>
+          <em data-i18n="drinkMood4">sweet / creamy</em>
+          <b>€9.80</b>
+        </button>
+        <button class="drink-row" data-drink="zero">
+          <span>05</span>
+          <strong>Nocturne Zero</strong>
+          <em data-i18n="drinkMood5">0.0 / fresh</em>
+          <b>€7.20</b>
+        </button>
+      </div>
+
+      <aside class="drink-detail">
+        <div class="drink-image">
+          <img id="drinkImage" src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=1400&q=84" alt="Cocktail" />
+        </div>
+        <div class="drink-info">
+          <small id="drinkTag">FRESH / CITRUS</small>
+          <h3 id="drinkName">Lunar Spritz</h3>
+          <p id="drinkDesc">gin, bezeg, limeta, prosecco, kumara</p>
+          <dl>
+            <div><dt data-i18n="profileLabel">profil</dt><dd id="drinkProfile">fresh / sparkling</dd></div>
+            <div><dt data-i18n="serveLabel">serve</dt><dd id="drinkServe">long glass</dd></div>
+          </dl>
+        </div>
+      </aside>
+    </section>
+
+    <section class="agenda" id="agenda">
+      <p class="section-index">03 / AGENDA</p>
+      <h2 data-i18n="agendaTitle">Tri noči. Trije ritmi.</h2>
+
+      <div class="agenda-stack">
+        <article>
+          <time>THU 20:00</time>
+          <h3 data-i18n="event1Title">Aperitivo Session</h3>
+          <p data-i18n="event1Text">spritz, amaro, lažji funk, prigrizki za deljenje</p>
+        </article>
+        <article>
+          <time>FRI 21:30</time>
+          <h3 data-i18n="event2Title">Vinyl After Dark</h3>
+          <p data-i18n="event2Text">jazz, soul, disco edits, signature meni do pozno</p>
+        </article>
+        <article>
+          <time>SAT 22:00</time>
+          <h3 data-i18n="event3Title">Midnight Classics</h3>
+          <p data-i18n="event3Text">negroni, old fashioned, martini, temnejši zvok</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="image-break">
+      <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1600&q=84" alt="Vinyl record" />
+      <div class="break-text">
+        <span>VINYL</span>
+        <span>ICE</span>
+        <span>LOW LIGHT</span>
+      </div>
+    </section>
+
+    <section class="booking" id="book">
+      <div class="booking-title">
+        <p class="section-index">04 / BOOKING</p>
+        <h2 data-i18n="bookingTitle">Rezerviraj mizo, ne samo sedež.</h2>
+      </div>
+
+      <div class="booking-grid">
+        <div class="booking-card">
+          <span data-i18n="addressLabel">naslov</span>
+          <strong>Gosposka ulica 13<br>1000 Ljubljana</strong>
+        </div>
+        <div class="booking-card">
+          <span data-i18n="hoursLabel">urnik</span>
+          <strong data-i18n="hoursText">Tor–čet 18:00–01:00<br>Pet–sob 18:00–02:00<br>Ned–pon zaprto</strong>
+        </div>
+        <div class="booking-card">
+          <span data-i18n="contactLabel">kontakt</span>
+          <strong>+386 40 013 013<br>hello@luna13.si</strong>
+        </div>
+        <div class="booking-actions">
+          <a href="tel:+38640013013" data-i18n="callNow">Pokliči</a>
+          <a href="mailto:hello@luna13.si" data-i18n="emailNow">Email</a>
+          <a target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Gosposka%20ulica%2013%2C%201000%20Ljubljana%2C%20Slovenia" data-i18n="mapNow">Zemljevid</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>LUNA 13</span>
+    <p data-i18n="footerNote">Demo spletna stran za portfolio. Ime, naslov, telefon in podatki so izmišljeni.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

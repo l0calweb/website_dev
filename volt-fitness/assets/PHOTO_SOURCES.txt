@@ -1,0 +1,11 @@
+Demo photo source notes
+
+Images are remote Unsplash demo images used only to show visual direction. Replace with client-approved local photos before publishing.
+
+hero: https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2100&q=84
+strength: https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1400&q=84
+hiit: https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1400&q=84
+mobility: https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=84
+trainer: https://images.unsplash.com/photo-1571019613914-85f342c6a11e?auto=format&fit=crop&w=1400&q=84
+gym: https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=1600&q=84
+boxing: https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=1400&q=84
