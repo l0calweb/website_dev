@@ -6,6 +6,25 @@
   <title>Spletne strani za lokale in manjša podjetja</title>
   <meta name="description" content="Jasne, mobilne in moderne spletne strani za lokale, restavracije, fitnes centre in manjša podjetja." />
   <meta name="theme-color" content="#f7fafc" />
+
+  <script>
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  
+    function forceTopOnNormalOpen() {
+      if (!window.location.hash) {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
+    }
+  
+    window.addEventListener("pageshow", forceTopOnNormalOpen);
+    window.addEventListener("load", forceTopOnNormalOpen);
+    document.addEventListener("DOMContentLoaded", forceTopOnNormalOpen);
+  </script>
+  
   <link rel="stylesheet" href="styles.css" />
 </head>
 
