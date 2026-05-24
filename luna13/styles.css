@@ -1011,3 +1011,15 @@ h1 span {
     letter-spacing: 0.18em;
   }
 }
+
+body::before {
+  content: "CSS FIX LOADED";
+  position: fixed;
+  z-index: 999999;
+  top: 20px;
+  left: 20px;
+  padding: 10px 14px;
+  background: red;
+  color: white;
+  font: 700 16px Arial, sans-serif;
+}
