@@ -1,399 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spletne strani za lokale in manjša podjetja</title>
-  <meta name="description" content="Jasne, mobilne in moderne spletne strani za lokale, restavracije, fitnes centre in manjša podjetja." />
-  <meta name="theme-color" content="#f7fafc" />
-
-  <script>
-    if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
-  
-    function forceTopOnNormalOpen() {
-      if (!window.location.hash) {
-        window.scrollTo(0, 0);
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-      }
-    }
-  
-    window.addEventListener("pageshow", forceTopOnNormalOpen);
-    window.addEventListener("load", forceTopOnNormalOpen);
-    document.addEventListener("DOMContentLoaded", forceTopOnNormalOpen);
-  </script>
-  
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LocalWeb izdeluje pregledne spletne strani za lokale, studie in manjša podjetja v Sloveniji. Oglejte si primere in cene.">
+  <meta name="theme-color" content="#f6f5ef">
+  <title>LocalWeb — spletne strani za lokalna podjetja</title>
+  <link rel="icon" href="assets/localweb.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
-  <div class="page-grid" aria-hidden="true"></div>
-
-  <header class="header" id="top">
-    <a class="logo" href="#top">
-      <span>Local</span><strong>Web</strong>
+<body id="top">
+  <a class="skip" href="#main">Preskoči na vsebino</a>
+  <header class="shell masthead">
+    <a class="brand" href="#top" aria-label="LocalWeb, na vrh">
+      <img src="assets/localweb.svg" width="26" height="26" alt="">
+      <span>localweb</span>
     </a>
-
-    <button class="nav-toggle" aria-label="Odpri meni" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-
-    <nav class="nav">
+    <nav aria-label="Glavna navigacija">
       <a href="#examples">Primeri</a>
-      <a href="#features">Funkcije</a>
-      <a href="#why">Zakaj stran</a>
-      <a href="#process">Proces</a>
-      <a href="#pricing">Cena</a>
-      <a class="nav-button" href="#contact">Kontakt</a>
+      <a href="#pricing">Cene</a>
+      <a href="#contact">Kontakt</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero section">
-      <div class="hero-content reveal">
-        <p class="label">Spletne strani za lokale, restavracije in manjša podjetja</p>
-        <h1>Stran, kjer gost takoj najde ponudbo, lokacijo in kontakt.</h1>
-        <p class="lead">
-          Izdelujem jasne one-page spletne strani, prilagojene telefonu. Namen je preprost: obiskovalec hitro razume ponudbo in brez iskanja naredi naslednji korak.
-        </p>
-
-        <div class="hero-actions">
-          <a class="button primary" href="#examples">Poglej primere</a>
-          <a class="button secondary" href="#contact">Pošlji povpraševanje</a>
+  <main class="shell" id="main" tabindex="-1">
+    <div class="intro">
+      <p class="eyebrow">Spletni studio · Slovenija</p>
+      <div class="intro-grid">
+        <h1>Spletne strani za <em>lokalna podjetja.</em></h1>
+        <div class="intro-detail">
+          <p>Vaše stranke na telefonu hitro najdejo ponudbo, cene in kontakt. Poskrbim za oblikovanje, izdelavo in objavo strani.</p>
+          <a class="text-link" href="#contact">Povejte mi, kaj potrebujete</a>
         </div>
       </div>
+    </div>
 
-      <aside class="decision-card reveal">
-        <div class="decision-head">
-          <span>Stran mora odgovoriti na 3 vprašanja</span>
-        </div>
-
-        <div class="decision-step">
-          <b>01</b>
-          <div>
-            <strong>Kaj ponujate?</strong>
-            <p>Meni, storitve, programi ali paketi.</p>
-          </div>
-        </div>
-
-        <div class="decision-step">
-          <b>02</b>
-          <div>
-            <strong>Kje ste?</strong>
-            <p>Naslov, zemljevid, odpiralni čas.</p>
-          </div>
-        </div>
-
-        <div class="decision-step">
-          <b>03</b>
-          <div>
-            <strong>Kako vas kontaktirati?</strong>
-            <p>Klic, email, rezervacija ali pot do lokala.</p>
-          </div>
-        </div>
-      </aside>
-    </section>
-
-    <section class="section examples" id="examples">
-      <div class="section-heading reveal">
-        <p class="label">Primeri</p>
-        <h2>Različni koncepti za različne tipe podjetij.</h2>
-        <p>
-          Primeri so demo koncepti. Podatki so izmišljeni, namen pa je pokazati, kako lahko izgleda spletna stran za pravi lokal ali storitveno podjetje.
-        </p>
+    <section id="examples" aria-labelledby="work-title">
+      <div class="section-line">
+        <h2 id="work-title">Primeri spletnih strani</h2>
+        <span>Demonstracijski projekti</span>
       </div>
 
-      <div class="cards">
-        <article class="project-card reveal">
-          <div class="project-preview screenshot-preview">
-            <img src="./assets/preview-forno-lume.webp" alt="Forno Lume website preview" />
+      <article class="feature">
+        <a class="feature-link" href="forno-lume/index.html" aria-labelledby="forno-title forno-action">
+          <div class="feature-copy">
+            <span class="project-category">01 / Picerija</span>
+            <h3 id="forno-title"><span>Forno</span> <span>Lume</span></h3>
+            <p>Digitalni meni v treh jezikih, odpiralni čas in informacije za obisk.</p>
+            <span class="feature-action" id="forno-action">Odpri demo</span>
           </div>
+          <div class="feature-image">
+            <img src="assets/forno-cover.webp" alt="" width="960" height="1197" fetchpriority="high" decoding="async">
+          </div>
+        </a>
+      </article>
 
-          <div class="project-body">
-            <span class="project-type">Pizzeria / restaurant</span>
-            <h3>Digitalni meni z jedmi, slikami, mnenji in rezervacijo.</h3>
-            <p>
-              Primerno za restavracije, pizzerije in lokale, kjer gost najprej išče ponudbo, lokacijo in odpiralni čas.
-            </p>
-
-            <div class="chips">
-              <span>3 jeziki</span>
-              <span>slike jedi</span>
-              <span>mnenja</span>
+      <div class="work-grid">
+        <article class="project">
+          <a href="volt-fitness/index.html" aria-labelledby="volt-title volt-action">
+            <div class="project-image volt" aria-hidden="true">
+              <img src="assets/volt-cover.webp" alt="" loading="lazy" decoding="async">
+              <span class="volt-type">VOLT<small>FITNESS CLUB</small></span>
             </div>
-
-            <a href="./forno-lume/index.html" target="_blank" rel="noreferrer">Odpri demo</a>
-          </div>
-        </article>
-
-        <article class="project-card reveal">
-          <div class="project-preview screenshot-preview">
-            <img src="./assets/preview-volt-fitness.webp" alt="VOLT Fitness website preview" />
-          </div>
-
-          <div class="project-body">
-            <span class="project-type">Fitness / studio</span>
-            <h3>Programi, urnik, paketi in prvi brezplačen obisk.</h3>
-            <p>
-              Primerno za fitnes centre, trenerje in storitve, kjer mora obiskovalec razumeti ponudbo in se hitro prijaviti.
-            </p>
-
-            <div class="chips">
-              <span>urnik</span>
-              <span>programi</span>
-              <span>paketi</span>
+            <div class="project-caption">
+              <div>
+                <span class="project-category">02 / Fitnes studio</span>
+                <h3 id="volt-title">VOLT Fitness</h3>
+                <p>Urnik treningov, programi in članarine.</p>
+              </div>
+              <span id="volt-action" class="project-action">Odpri demo</span>
             </div>
-
-            <a href="./volt-fitness/index.html" target="_blank" rel="noreferrer">Odpri demo</a>
-          </div>
+          </a>
         </article>
-
-        <article class="project-card reveal">
-          <div class="project-preview screenshot-preview">
-            <img src="./assets/preview-luna13.webp" alt="LUNA 13 website preview" />
-          </div>
-
-          <div class="project-body">
-            <span class="project-type">Bar / nightlife</span>
-            <h3>Močan vizualni koncept za bar z atmosfero.</h3>
-            <p>
-              Primerno za bare, lounge lokale in večerne prostore, kjer je pomemben občutek znamke, dogodki in rezervacija mize.
-            </p>
-
-            <div class="chips">
-              <span>cocktails</span>
-              <span>agenda</span>
-              <span>booking</span>
+        <article class="project">
+          <a href="luna13/index.html" aria-labelledby="luna-title luna-action">
+            <div class="project-image luna" aria-hidden="true">
+              <img src="assets/luna-cover.webp" alt="" loading="lazy" decoding="async">
+              <span class="luna-type">LUNA <b>13</b><small>COCKTAIL &amp; VINYL BAR</small></span>
             </div>
-
-            <a href="./luna13/index.html" target="_blank" rel="noreferrer">Odpri demo</a>
-          </div>
+            <div class="project-caption">
+              <div>
+                <span class="project-category">03 / Koktajl bar</span>
+                <h3 id="luna-title">LUNA 13</h3>
+                <p>Koktajli, glasbeni večeri in informacije za obisk.</p>
+              </div>
+              <span id="luna-action" class="project-action">Odpri demo</span>
+            </div>
+          </a>
         </article>
       </div>
     </section>
 
-    <section class="section features" id="features">
-      <div class="section-heading reveal">
-        <p class="label">Funkcije strani</p>
-        <h2>Najprej mobilna izkušnja, potem jasna struktura.</h2>
-        <p>
-          Večina potencialnih strank bo stran odprla na telefonu: iz Google Maps, Instagrama, sporočila ali QR kode. Zato mora biti ponudba hitro berljiva, kontakti pa vedno blizu.
-        </p>
+    <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="section-line">
+        <h2 id="pricing-title">Storitev in cene</h2>
       </div>
-
-      <div class="feature-system">
-        <article class="feature-intro reveal">
-          <span>Mobilno kot osnova</span>
-          <h3>Stran je narejena za hitro odločanje na telefonu.</h3>
-          <p>
-            Obiskovalec ne išče po desetih objavah ali slikah. V nekaj klikih pride do menija, lokacije, kontaktov ali rezervacije.
-          </p>
+      <div class="pricing-grid">
+        <article class="price">
+          <h3>Enostranska spletna stran</h3>
+          <p class="price-value">249 € <small>enkratno</small></p>
+          <ul class="price-list">
+            <li>Ena lokacija, en jezik in do pet vsebinskih sklopov.</li>
+            <li>Meni ali cenik z do 20 postavkami, odpiralni čas, povezava do zemljevida ter klic ali e-pošta.</li>
+            <li>Vi pošljete besedilo, logotip in do osem fotografij. Besedilo po potrebi uredim, fotografije pripravim za splet.</li>
+            <li>Prilagoditev za telefon in računalnik, naslov in opis za iskalnike ter pregled povezav.</li>
+            <li>En krog popravkov, objava in predaja strani.</li>
+          </ul>
         </article>
-
-        <div class="feature-groups">
-          <article class="feature-group reveal">
-            <div class="feature-icon">01</div>
-            <h3>Ponudba</h3>
-            <p>Vse, kar gost potrebuje, da razume, kaj ponujate.</p>
-            <ul>
-              <li>Meni ali seznam storitev</li>
-              <li>Cene, paketi ali programi</li>
-              <li>Slike jedi, prostora ali rezultatov</li>
-              <li>Sezonske in začasne ponudbe</li>
-            </ul>
-          </article>
-
-          <article class="feature-group reveal">
-            <div class="feature-icon">02</div>
-            <h3>Kontakt in lokacija</h3>
-            <p>Vse poti do podjetja so zbrane na enem mestu.</p>
-            <ul>
-              <li>Telefon, email ali Instagram</li>
-              <li>Google Maps lokacija</li>
-              <li>Odpiralni čas</li>
-              <li>Rezervacija ali naročilo</li>
-            </ul>
-          </article>
-
-          <article class="feature-group reveal">
-            <div class="feature-icon">03</div>
-            <h3>Zaupanje in jeziki</h3>
-            <p>Stran mora biti razumljiva tudi turistom in novim obiskovalcem.</p>
-            <ul>
-              <li>Slovenščina, angleščina, italijanščina</li>
-              <li>Mnenja in ocene</li>
-              <li>Kratek opis lokala ali storitve</li>
-              <li>Jasna vizualna predstavitev</li>
-            </ul>
-          </article>
-
-          <article class="feature-group reveal">
-            <div class="feature-icon">04</div>
-            <h3>Nadgradnje po dogovoru</h3>
-            <p>Funkcije se prilagodijo tipu podjetja, ne obratno.</p>
-            <ul>
-              <li>QR povezava do menija</li>
-              <li>Posebne akcije ali dogodki</li>
-              <li>Osnovni SEO</li>
-              <li>Druge funkcije po potrebi</li>
-            </ul>
-          </article>
+        <article class="price">
+          <h3>Posodobitve po želji</h3>
+          <p class="price-value">25 € <small>/ mesec</small></p>
+          <p>Do 30 minut manjših sprememb v enem paketu na mesec. Na primer nov cenik, spremenjen urnik, menjava fotografije ali krajši popravek besedila.</p>
+          <p>Brez letne vezave. Neporabljene minute se ne prenašajo.</p>
+          <p class="one-off"><strong>30 € enkratno</strong> za posodobitev do 30 minut.</p>
+        </article>
+      </div>
+      <div class="offer-notes">
+        <div>
+          <h3>Dodatno po dogovoru</h3>
+          <p>Posebej ocenim dodatne jezike in prevode, nove sklope, fotografiranje, pisanje besedil, obrazce, urejevalnik vsebin, sistem rezervacij, spletno trgovino in zahtevnejše povezave z drugimi sistemi. Interaktivne funkcije v demih prikazujejo možnosti nadgradnje.</p>
+        </div>
+        <div>
+          <h3>Domena in gostovanje</h3>
+          <p>Domeno, morebitno plačljivo gostovanje in naročnine pri drugih ponudnikih navedem ločeno v ponudbi.</p>
         </div>
       </div>
     </section>
 
-    <section class="section why" id="why">
-      <div class="section-heading reveal">
-        <p class="label">Zakaj sploh imeti spletno stran?</p>
-        <h2>V sezoni pozornost gosta traja kratko. Dobra stran mu olajša odločitev.</h2>
-        <p>
-          Ko ima obiskovalec pred sabo več lokalov, pogosto izbere tistega, kjer najhitreje razume ponudbo. Jasna stran z menijem, slikami in kontaktom zmanjša dvom in poveča možnost, da iz zanimanja nastane obisk, naročilo ali rezervacija.
-        </p>
+    <section class="process" aria-labelledby="process-title">
+      <div class="section-line">
+        <h2 id="process-title">Kako poteka naročilo?</h2>
       </div>
-
-      <div class="why-layout">
-        <article class="why-main reveal">
-          <span>Glavna ideja</span>
-          <h3>Stran mora odgovoriti na vprašanja, ki jih gost že ima.</h3>
-          <p>
-            Kaj lahko naročim? Kako izgleda hrana? Kakšne so cene? Kje je lokal? Je odprto? Lahko rezerviram? Bolj kot so odgovori jasni, lažje se gost odloči.
-          </p>
-        </article>
-
-        <div class="why-points">
-          <article class="reveal">
-            <strong>01</strong>
-            <h3>Meni pred obiskom</h3>
-            <p>Če gost vidi meni in slike hrane že prej, si lažje predstavlja obisk. Pogosto že vnaprej ve, kaj bi naročil.</p>
-          </article>
-
-          <article class="reveal">
-            <strong>02</strong>
-            <h3>Manj odvisnosti od tiskanih menijev</h3>
-            <p>Na spletni strani se lahko jedi, cene, sezonske ponudbe in začasne spremembe posodobijo hitreje kot pri tiskanem meniju.</p>
-          </article>
-
-          <article class="reveal">
-            <strong>03</strong>
-            <h3>Boljša odločitev za turista</h3>
-            <p>Turisti pogosto primerjajo več možnosti na telefonu. Stran v več jezikih z jasnim menijem in zemljevidom pomaga zadržati njihovo pozornost.</p>
-          </article>
-
-          <article class="reveal">
-            <strong>04</strong>
-            <h3>Jasen naslednji korak</h3>
-            <p>Namesto da gost išče številko, naslov ali Instagram, ima takoj gumbe za klic, pot, rezervacijo ali naročilo.</p>
-          </article>
-        </div>
-      </div>
+      <ol class="process-list">
+        <li>
+          <h3>Dogovor</h3>
+          <p>Dogovorimo se o vsebini in roku. V pisni ponudbi potrdim končni znesek, obračun DDV, čas izstavitve računa in plačilne roke, vključno z morebitnim predplačilom.</p>
+        </li>
+        <li>
+          <h3>Predogled</h3>
+          <p>Ko prejmem gradivo in morebitno dogovorjeno predplačilo, pripravim prvo različico strani. Ogledate si jo na telefonu in računalniku.</p>
+        </li>
+        <li>
+          <h3>Popravki in potrditev</h3>
+          <p>Pripombe zberete v enem seznamu. Popravke vnesem in vam pošljem končno različico v potrditev.</p>
+        </li>
+        <li>
+          <h3>Objava in predaja</h3>
+          <p>Po potrditvi objavim stran na dogovorjenem gostovanju. Predam vam izvorne datoteke, dostope in kratka navodila.</p>
+        </li>
+      </ol>
     </section>
 
-    <section class="section compare reveal">
+    <section class="contact" id="contact" aria-labelledby="contact-title">
       <div>
-        <p class="label">Google Maps + spletna stran</p>
-        <h2>Spletna stran ne nadomesti Google Maps. Dopolni ga.</h2>
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="contact-title">Se pogovoriva<br>o vaši strani?</h2>
       </div>
-      <p>
-        Google Maps pokaže osnovne podatke. Spletna stran pa predstavi ponudbo, slike, mnenja, jezike, zgodbo lokala in jasen poziv: pokliči, rezerviraj ali pridi.
-      </p>
-    </section>
-
-    <section class="section process" id="process">
-      <div class="section-heading reveal">
-        <p class="label">Proces</p>
-        <h2>Preprost potek od ideje do objave.</h2>
-      </div>
-
-      <div class="timeline">
-        <div class="reveal">
-          <strong>1</strong>
-          <h3>Podatki</h3>
-          <p>Pošljete ime, lokacijo, urnik, ponudbo, slike in kontakt.</p>
-        </div>
-
-        <div class="reveal">
-          <strong>2</strong>
-          <h3>Osnutek</h3>
-          <p>Pripravim prvo verzijo strani z dizajnom, besedili in strukturo.</p>
-        </div>
-
-        <div class="reveal">
-          <strong>3</strong>
-          <h3>Popravki</h3>
-          <p>Skupaj uredimo detajle: slike, cene, jezik, gumbe in vsebino.</p>
-        </div>
-
-        <div class="reveal">
-          <strong>4</strong>
-          <h3>Objava</h3>
-          <p>Stran objavimo in jo povežemo z Instagramom ali Google Maps.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section pricing" id="pricing">
-      <div class="section-heading reveal">
-        <p class="label">Cena</p>
-        <h2>Enostaven začetek:</h2>
-      </div>
-
-      <div class="pricing-grid pricing-two">
-        <article class="featured reveal">
-          <span>Izdelava strani</span>
-          <h3>od 199€</h3>
-          <p>One-page spletna stran z jasno predstavitvijo, ponudbo, lokacijo, kontaktom in mobilno verzijo.</p>
-          <ul>
-            <li>osnovna struktura strani</li>
-            <li>meni ali storitve</li>
-            <li>kontakt in zemljevid</li>
-            <li>mobilna prilagoditev</li>
-          </ul>
-        </article>
-
-        <article class="reveal">
-          <span>Vzdrževanje</span>
-          <h3>25€/mes</h3>
-          <p>Za manjše sprotne spremembe po objavi strani.</p>
-          <ul>
-            <li>menjava menija ali cen</li>
-            <li>posodobitev slik</li>
-            <li>sprememba urnika</li>
-            <li>manjši popravki besedil</li>
-          </ul>
-        </article>
-      </div>
-
-      <p class="note reveal">Končna cena je odvisna od obsega, jezikov, slik in dodatnih funkcij.</p>
-    </section>
-
-    <section class="section contact" id="contact">
-      <div class="contact-box reveal">
-        <p class="label">Kontakt</p>
-        <h2>Želite podobno stran za svoj lokal?</h2>
-        <p>Pošljite ime podjetja, trenutno povezavo do Google Maps ali Instagrama in pripravim kratek predlog.</p>
-
-        <div class="contact-actions">
-          <a class="button primary" href="https://www.instagram.com/l0calweb/" target="_blank" rel="noreferrer">Instagram</a>
-          <a class="button secondary" href="mailto:l0calweb@outlook.com">E-mail</a>
-        </div>
+      <div class="contact-detail">
+        <p>Pošljite ime podjetja in povezavo do vašega profila ali obstoječe strani. Pripravim kratek predlog.</p>
+        <a class="email-link" href="mailto:l0calweb@outlook.com">l0calweb@outlook.com</a>
+        <a class="instagram" href="https://www.instagram.com/l0calweb/">Instagram @l0calweb</a>
       </div>
     </section>
   </main>
 
-  <footer class="footer section">
-    <a class="logo" href="#top">
-      <span>Local</span><strong>Web</strong>
-    </a>
-    <p>
-      Kontakt:
-      <a href="mailto:l0calweb@outlook.com">l0calweb@outlook.com</a>
-      · Instagram:
-      <a href="https://www.instagram.com/l0calweb/" target="_blank" rel="noreferrer">@l0calweb</a>
-    </p>
+  <footer class="shell footer">
+    <span>LocalWeb · Slovenija</span>
+    <a href="#top">Na vrh</a>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VOLT Fitness Club — treningi, gym in osebno trenerstvo</title>
-  <meta name="description" content="VOLT Fitness Club: funkcionalni treningi, strength, HIIT, mobilnost, osebno trenerstvo, odprta vadba, urnik in članarine." />
+  <meta name="description" content="Demo spletne strani za izmišljeni fitnes VOLT. Poglej tedenski urnik, programe vadbe in pakete članarin." />
   <meta name="theme-color" content="#0b0d10" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
@@ -14,7 +14,7 @@
   <div class="orb orb-a"></div>
   <div class="orb orb-b"></div>
 
-  <header class="topbar" id="top">
+  <header class="topbar">
     <a class="brand" href="#top" aria-label="VOLT home">
       <span class="brand-icon">V</span>
       <span><strong>VOLT</strong><small>Fitness Club</small></span>
@@ -25,20 +25,20 @@
     </button>
 
     <nav class="nav">
-      <a href="#programs" data-i18n="navPrograms">Programi</a>
       <a href="#schedule" data-i18n="navSchedule">Urnik</a>
+      <a href="#programs" data-i18n="navPrograms">Programi</a>
       <a href="#pricing" data-i18n="navPricing">Članarine</a>
-      <a href="#contact" class="nav-cta" data-i18n="navTrial">Brezplačen obisk</a>
+      <a href="#contact" class="nav-cta" data-i18n="navTrial">Prvi obisk</a>
     </nav>
 
     <div class="language-switcher" aria-label="Language switcher">
-      <button class="lang-btn" data-lang="en">EN</button>
-      <button class="lang-btn active" data-lang="sl">SL</button>
-      <button class="lang-btn" data-lang="it">IT</button>
+      <button class="lang-btn" aria-pressed="false" data-lang="en">EN</button>
+      <button class="lang-btn active" aria-pressed="true" data-lang="sl">SL</button>
+      <button class="lang-btn" aria-pressed="false" data-lang="it">IT</button>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
       <div class="hero-bg">
         <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2100&q=84" alt="Fitness center training floor" />
@@ -46,68 +46,66 @@
 
       <div class="hero-grid">
         <div class="hero-copy">
-          <p class="kicker" data-i18n="heroKicker">Ljubljana · funkcionalni trening center</p>
-          <h1 data-i18n="heroTitle">Treniraj pametno. Premikaj se močneje.</h1>
-          <p class="hero-lead" data-i18n="heroLead">
-            VOLT združuje odprti gym, vodene treninge, osebno trenerstvo in mobilnost v sistem, ki ga lahko slediš tudi ob polnem urniku.
-          </p>
+          <p class="demo-label" data-i18n="demoLabel">Demo za izmišljen fitnes</p>
+          <p class="kicker" data-i18n="heroKicker">Ljubljana · funkcionalna vadba</p>
+          <h1 data-i18n="heroTitle">Treniraj z načrtom.</h1>
+          <p class="hero-lead" data-i18n="heroLead">Vodene vadbe v majhnih skupinah, samostojni trening in osebno trenerstvo.</p>
 
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary" data-i18n="heroPrimary">Rezerviraj brezplačen trening</a>
-            <a href="#schedule" class="btn btn-outline" data-i18n="heroSecondary">Poglej urnik</a>
+            <a href="#schedule" class="btn btn-primary" data-i18n="heroPrimary">Poglej urnik</a>
+            <a href="#contact" class="btn btn-outline" data-i18n="heroSecondary">Prvi obisk</a>
           </div>
         </div>
-
-        <aside class="hero-dashboard" aria-label="Club highlights">
-          <div class="dash-header">
-            <span data-i18n="dashLive">danes v klubu</span>
-            <strong>18:00</strong>
-          </div>
-          <div class="dash-class">
-            <span class="dot"></span>
-            <div>
-              <b data-i18n="dashClass">VOLT Strength</b>
-              <p data-i18n="dashCoach">Trener: Maja · 6 prostih mest</p>
-            </div>
-          </div>
-          <div class="metrics">
-            <div><strong>24/7</strong><span data-i18n="metricAccess">dostop za člane</span></div>
-            <div><strong>8</strong><span data-i18n="metricPrograms">programov</span></div>
-            <div><strong>4.9</strong><span data-i18n="metricRating">ocena članov</span></div>
-          </div>
-        </aside>
       </div>
     </section>
 
-    <section class="motion-strip">
-      <div class="strip-track">
-        <span data-i18n="strip1">Strength</span>
-        <span data-i18n="strip2">HIIT</span>
-        <span data-i18n="strip3">Mobility</span>
-        <span data-i18n="strip4">Personal coaching</span>
-        <span data-i18n="strip5">Open gym</span>
-        <span data-i18n="strip6">Nutrition check-in</span>
-        <span data-i18n="strip7">Small groups</span>
+    <section class="section schedule" id="schedule">
+      <div class="section-head compact">
+        <p class="kicker" data-i18n="scheduleKicker">Urnik</p>
+        <h2 data-i18n="scheduleTitle">Tedenski urnik</h2>
       </div>
-    </section>
 
-    <section class="section intro">
-      <div class="intro-card">
-        <span>01</span>
-        <h2 data-i18n="introTitle1">Sistem, ne naključni treningi.</h2>
-        <p data-i18n="introText1">Treningi so razdeljeni po ciljih: moč, kondicija, tehnika in regeneracija. Tako napredek ni odvisen od motivacije tistega dne.</p>
+      <div class="day-tabs">
+        <button class="day active" aria-pressed="true" data-day="mon" data-i18n="dayMon">Pon</button>
+        <button class="day" aria-pressed="false" data-day="tue" data-i18n="dayTue">Tor</button>
+        <button class="day" aria-pressed="false" data-day="wed" data-i18n="dayWed">Sre</button>
+        <button class="day" aria-pressed="false" data-day="thu" data-i18n="dayThu">Čet</button>
+        <button class="day" aria-pressed="false" data-day="fri" data-i18n="dayFri">Pet</button>
       </div>
-      <div class="intro-card">
-        <span>02</span>
-        <h2 data-i18n="introTitle2">Majhne skupine, več popravkov.</h2>
-        <p data-i18n="introText2">Trener vidi tvojo tehniko, prilagodi vaje in poskrbi, da trening ni samo težek, ampak tudi smiseln.</p>
+
+      <div class="schedule-list">
+        <article class="session" data-days="mon wed fri">
+          <time>06:30</time>
+          <div><h3>Morning Engine</h3><p data-i18n="session1">Kratek, intenziven start dneva: intervali, core, mobilnost.</p></div>
+          <a href="#contact" data-i18n="bookSmall">Prvi obisk</a>
+        </article>
+        <article class="session" data-days="mon thu">
+          <time>17:00</time>
+          <div><h3>VOLT Strength</h3><p data-i18n="session2">Tehnika osnovnih dvigov in dodatne vaje za moč.</p></div>
+          <a href="#contact" data-i18n="bookSmall">Prvi obisk</a>
+        </article>
+        <article class="session" data-days="tue thu">
+          <time>18:30</time>
+          <div><h3>HIIT Engine</h3><p data-i18n="session3">Cardio postaje, kettlebelli, tempo in finiš.</p></div>
+          <a href="#contact" data-i18n="bookSmall">Prvi obisk</a>
+        </article>
+        <article class="session" data-days="wed fri">
+          <time>19:30</time>
+          <div><h3>Mobility Reset</h3><p data-i18n="session4">Gibljivost, dihanje, stabilnost in regeneracija.</p></div>
+          <a href="#contact" data-i18n="bookSmall">Prvi obisk</a>
+        </article>
+        <article class="session" data-days="tue fri">
+          <time>20:00</time>
+          <div><h3>Box & Burn</h3><p data-i18n="session5">Boksarski elementi, footwork in kondicijski del.</p></div>
+          <a href="#contact" data-i18n="bookSmall">Prvi obisk</a>
+        </article>
       </div>
     </section>
 
     <section class="section programs" id="programs">
       <div class="section-head">
         <p class="kicker" data-i18n="programsKicker">Programi</p>
-        <h2 data-i18n="programsTitle">Izberi način treninga, ki se ujema s tvojim ciljem.</h2>
+        <h2 data-i18n="programsTitle">Programi vadbe</h2>
       </div>
 
       <div class="program-grid">
@@ -150,73 +148,15 @@
       </div>
     </section>
 
-    <section class="performance">
-      <div class="performance-copy">
-        <p class="kicker" data-i18n="performanceKicker">Zakaj VOLT</p>
-        <h2 data-i18n="performanceTitle">Merljiv napredek brez kaosa.</h2>
-        <p data-i18n="performanceText">Ob prvem obisku naredimo kratek check-in: cilj, izkušnje, gibljivost in urnik. Nato dobiš predlog, kateri treningi imajo največ smisla zate.</p>
-      </div>
-
-      <div class="performance-bars" aria-label="Performance system">
-        <div class="bar-item"><span data-i18n="bar1">Moč</span><i style="--w: 88%"></i></div>
-        <div class="bar-item"><span data-i18n="bar2">Kondicija</span><i style="--w: 76%"></i></div>
-        <div class="bar-item"><span data-i18n="bar3">Mobilnost</span><i style="--w: 68%"></i></div>
-        <div class="bar-item"><span data-i18n="bar4">Doslednost</span><i style="--w: 92%"></i></div>
-      </div>
-    </section>
-
-    <section class="section schedule" id="schedule">
-      <div class="section-head compact">
-        <p class="kicker" data-i18n="scheduleKicker">Urnik</p>
-        <h2 data-i18n="scheduleTitle">Izberi dan. Najdi trening.</h2>
-      </div>
-
-      <div class="day-tabs">
-        <button class="day active" data-day="mon" data-i18n="dayMon">Pon</button>
-        <button class="day" data-day="tue" data-i18n="dayTue">Tor</button>
-        <button class="day" data-day="wed" data-i18n="dayWed">Sre</button>
-        <button class="day" data-day="thu" data-i18n="dayThu">Čet</button>
-        <button class="day" data-day="fri" data-i18n="dayFri">Pet</button>
-      </div>
-
-      <div class="schedule-list">
-        <article class="session" data-days="mon wed fri">
-          <time>06:30</time>
-          <div><h3>Morning Engine</h3><p data-i18n="session1">Kratek, intenziven start dneva: intervali, core, mobilnost.</p></div>
-          <a href="#contact" data-i18n="bookSmall">Rezerviraj</a>
-        </article>
-        <article class="session" data-days="mon thu">
-          <time>17:00</time>
-          <div><h3>VOLT Strength</h3><p data-i18n="session2">Tehnika, glavne dvige in dodatne vaje za moč.</p></div>
-          <a href="#contact" data-i18n="bookSmall">Rezerviraj</a>
-        </article>
-        <article class="session" data-days="tue thu">
-          <time>18:30</time>
-          <div><h3>HIIT Engine</h3><p data-i18n="session3">Cardio postaje, kettlebelli, tempo in finiš.</p></div>
-          <a href="#contact" data-i18n="bookSmall">Rezerviraj</a>
-        </article>
-        <article class="session" data-days="wed fri">
-          <time>19:30</time>
-          <div><h3>Mobility Reset</h3><p data-i18n="session4">Gibljivost, dihanje, stabilnost in regeneracija.</p></div>
-          <a href="#contact" data-i18n="bookSmall">Rezerviraj</a>
-        </article>
-        <article class="session" data-days="tue fri">
-          <time>20:00</time>
-          <div><h3>Box & Burn</h3><p data-i18n="session5">Boksarski elementi, footwork in kondicijski del.</p></div>
-          <a href="#contact" data-i18n="bookSmall">Rezerviraj</a>
-        </article>
-      </div>
-    </section>
-
     <section class="section pricing" id="pricing">
       <div class="section-head compact">
         <p class="kicker" data-i18n="pricingKicker">Članarine</p>
-        <h2 data-i18n="pricingTitle">Plačaj za ritem, ki ga res uporabljaš.</h2>
+        <h2 data-i18n="pricingTitle">Paketi članarin</h2>
       </div>
 
       <div class="pricing-toggle">
         <span data-i18n="monthly">Mesečno</span>
-        <button class="toggle-price" aria-label="Toggle billing"><i></i></button>
+        <button class="toggle-price" aria-label="Toggle billing" aria-pressed="false"><i></i></button>
         <span data-i18n="annual">Letno -15%</span>
       </div>
 
@@ -229,7 +169,6 @@
             <li data-i18n="plan1b">Osnovni program v aplikaciji</li>
             <li data-i18n="plan1c">1 check-in mesečno</li>
           </ul>
-          <a href="#contact" data-i18n="choosePlan">Izberi paket</a>
         </article>
         <article class="price-card featured">
           <p data-i18n="plan2Name">VOLT Classes</p>
@@ -239,7 +178,6 @@
             <li data-i18n="plan2b">Open gym dostop</li>
             <li data-i18n="plan2c">Sledenje napredku</li>
           </ul>
-          <a href="#contact" data-i18n="choosePlan">Izberi paket</a>
         </article>
         <article class="price-card">
           <p data-i18n="plan3Name">Personal</p>
@@ -249,7 +187,6 @@
             <li data-i18n="plan3b">Individualen plan</li>
             <li data-i18n="plan3c">Tedenski check-in</li>
           </ul>
-          <a href="#contact" data-i18n="choosePlan">Izberi paket</a>
         </article>
       </div>
     </section>
@@ -260,54 +197,53 @@
       </div>
       <div class="trainer-copy">
         <p class="kicker" data-i18n="trainerKicker">Trenerji</p>
-        <h2 data-i18n="trainerTitle">Trening ni test ega. Je proces.</h2>
-        <p data-i18n="trainerText">Naši trenerji ne kričijo zato, da bi trening izgledal težji. Popravijo tehniko, prilagodijo obremenitev in poskrbijo, da veš, zakaj delaš določeno vajo.</p>
+        <h2 data-i18n="trainerTitle">Spoznaj trenerje</h2>
+        <p data-i18n="trainerText">Trenerji ti pomagajo pri tehniki in prilagodijo obremenitev tvoji pripravljenosti.</p>
         <div class="coach-list">
-          <div><strong>Maja</strong><span data-i18n="coach1">strength & mobility</span></div>
-          <div><strong>Luka</strong><span data-i18n="coach2">HIIT & conditioning</span></div>
-          <div><strong>Nina</strong><span data-i18n="coach3">personal coaching</span></div>
+          <button class="coach-trigger" type="button" data-coach="maja" aria-haspopup="dialog" aria-controls="coachModal">
+            <span><strong>Maja</strong><span class="coach-role" data-i18n="coach1">Moč in gibljivost</span></span>
+            <span class="coach-trigger-label" data-i18n="coachProfile">Profil</span>
+          </button>
+          <button class="coach-trigger" type="button" data-coach="luka" aria-haspopup="dialog" aria-controls="coachModal">
+            <span><strong>Luka</strong><span class="coach-role" data-i18n="coach2">HIIT in kondicija</span></span>
+            <span class="coach-trigger-label" data-i18n="coachProfile">Profil</span>
+          </button>
+          <button class="coach-trigger" type="button" data-coach="nina" aria-haspopup="dialog" aria-controls="coachModal">
+            <span><strong>Nina</strong><span class="coach-role" data-i18n="coach3">Osebno trenerstvo</span></span>
+            <span class="coach-trigger-label" data-i18n="coachProfile">Profil</span>
+          </button>
         </div>
       </div>
     </section>
 
     <section class="contact section" id="contact">
       <div class="contact-card">
-        <div>
-          <p class="kicker" data-i18n="contactKicker">Prvi obisk</p>
-          <h2 data-i18n="contactTitle">Pridi na brezplačen uvodni trening.</h2>
-          <p data-i18n="contactText">Povej nam cilj, izberi termin in pripravljeni bomo. Uvodni obisk vključuje kratek posvet, trening in predlog paketa.</p>
-        </div>
-
-        <div class="contact-actions">
-          <a href="tel:+38640111222" class="btn btn-primary" data-i18n="callNow">Pokliči zdaj</a>
-          <a href="mailto:hello@voltfit.si" class="btn btn-outline" data-i18n="sendEmail">Pošlji email</a>
-          <a href="https://maps.google.com/?q=Tr%C5%BEa%C5%A1ka%20cesta%2022%2C%201000%20Ljubljana%2C%20Slovenia" target="_blank" rel="noreferrer" class="btn btn-ghost" data-i18n="openMap">Odpri zemljevid</a>
-        </div>
-      </div>
-
-      <div class="contact-details">
-        <div><span data-i18n="address">Naslov</span><strong>Tržaška cesta 22<br>1000 Ljubljana</strong></div>
-        <div><span data-i18n="phone">Telefon</span><strong>+386 40 111 222</strong></div>
-        <div><span data-i18n="hours">Odprto</span><strong data-i18n="openHours">Pon–pet 06:00–23:00<br>Sob–ned 08:00–20:00</strong></div>
+        <p class="kicker" data-i18n="contactKicker">Prvi obisk</p>
+        <h2 data-i18n="contactTitle">Brezplačen uvodni trening</h2>
+        <p data-i18n="contactText">Prvi obisk vključuje pogovor o ciljih, vodeno vadbo in predlog programa.</p>
+        <p class="demo-visit" data-i18n="demoVisit">To je prikaz prvega obiska. Rezervacije niso na voljo.</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
     <a class="brand" href="#top"><span class="brand-icon">V</span><span><strong>VOLT</strong><small>Fitness Club</small></span></a>
-    <p data-i18n="footerNote">Demo spletna stran za portfolio. Ime, lokacija, telefon in podatki so izmišljeni.</p>
+    <div>
+      <p data-i18n="footerNote">VOLT je izmišljen fitnes za prikaz spletne strani.</p>
+      <a class="portfolio-link" href="../index.html" data-i18n="portfolioLink">Nazaj na LocalWeb</a>
+    </div>
   </footer>
 
   <div class="mobile-quick">
-    <a href="tel:+38640111222" data-i18n="mobileCall">Klic</a>
+    <a href="#contact" data-i18n="mobileTrial">Prvi obisk</a>
     <a href="#schedule" data-i18n="mobileSchedule">Urnik</a>
     <a href="#pricing" data-i18n="mobilePricing">Paketi</a>
   </div>
 
-  <div class="program-modal" id="programModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <dialog class="program-modal" id="programModal" aria-labelledby="modalTitle">
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-panel">
-      <button class="modal-close" type="button" aria-label="Close" data-close-modal>×</button>
+      <button class="modal-close" type="button" aria-label="Zapri" data-close-modal autofocus>×</button>
       <div class="modal-label" id="modalLabel"></div>
       <h2 id="modalTitle"></h2>
       <p id="modalIntro"></p>
@@ -331,11 +267,33 @@
 
       <div class="modal-actions">
         <a href="#schedule" class="btn btn-primary" data-close-modal data-i18n="modalSchedule">Poglej termine</a>
-        <a href="#contact" class="btn btn-outline" data-close-modal data-i18n="modalTrial">Rezerviraj prvi obisk</a>
+        <a href="#contact" class="btn btn-outline" data-close-modal data-i18n="modalTrial">O prvem obisku</a>
       </div>
     </div>
-  </div>
+  </dialog>
 
+
+  <dialog class="program-modal coach-modal" id="coachModal" aria-labelledby="coachTitle">
+    <div class="modal-backdrop" aria-hidden="true"></div>
+    <div class="modal-panel">
+      <div class="coach-dialog-header">
+        <p class="modal-label" data-i18n="coachDemo">Izmišljen profil</p>
+        <form method="dialog">
+          <button class="btn btn-outline coach-close" autofocus data-i18n="coachClose">Zapri</button>
+        </form>
+      </div>
+      <div class="coach-profile">
+        <img id="coachPortrait" src="assets/maja-portrait.webp" width="160" height="160" loading="lazy" alt="" />
+        <div>
+          <h2 id="coachTitle"></h2>
+          <p id="coachRole"></p>
+        </div>
+      </div>
+      <p id="coachBio"></p>
+      <h3 data-i18n="coachIntroLabel">Na prvem treningu</h3>
+      <p id="coachIntro"></p>
+    </div>
+  </dialog>
 
   <script src="script.js"></script>
 </body>

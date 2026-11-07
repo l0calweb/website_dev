@@ -1,17 +1,22 @@
-Local demo images downloaded from Unsplash photo download pages and optimized for mobile.
+Food photographs in this demo are stored locally. They are illustrative.
 
-Food images stored in assets/:
+- funghi.jpg (homepage pizza) — Unsplash photo NslkeZ_CY4I
+- burrata.jpg (visit section pizza slices) — Unsplash photo 22Vt7JIf7ZI
 - margherita.jpg — Unsplash photo Z-vPhsDBYhI
 - diavola.jpg — Unsplash photo __MJduQELx8
-- burrata.jpg — Unsplash photo 22Vt7JIf7ZI
-- funghi.jpg — Unsplash photo NslkeZ_CY4I
-- verdure.jpg — Unsplash photo rUrtOhmzv-s
 - ragu.jpg — Unsplash photo 84qvBiHrWgg
+- panna.jpg — Unsplash photo dDHZKYISxso
+
+WebP versions of the four existing dish photos are served in the menu.
+Generated menu images illustrate Burrata e Prosciutto, Funghi
+Tartufata, Verdure, Bruschetta Trio, Insalata Mediterranea, Gnocchi al Pesto
+and Tiramisù della Casa. They are based on the fictional menu descriptions.
+Photo brief: one dish per image, ingredients matched to the menu, cream
+ceramics on a warm tabletop, gentle daylight and a three-quarter view.
+
+The following original assets are retained in the project.
+- verdure.jpg — Unsplash photo rUrtOhmzv-s
 - gnocchi.jpg — Unsplash photo Etsdv1OFgEo
 - bruschetta.jpg — Unsplash photo oiBsS-7fmHM
 - salad.jpg — Unsplash photo 6oNkl84pB4g
 - tiramisu.jpg — Unsplash photo ikyvQMc4ePA
-- panna.jpg — Unsplash photo dDHZKYISxso
-
-All restaurant data, menu text, prices, reviews and business contact information are fictional demo content.
-For a real client, replace all photos and text with client-approved material.

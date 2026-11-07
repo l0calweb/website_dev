@@ -1,287 +1,269 @@
-<!DOCTYPE html>
-<html lang="sl">
+<!doctype html>
+<html lang="sl" id="top">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Forno Lume — pizzeria, antipasti & vino</title>
-  <meta name="description" content="Forno Lume je sodobna pizzeria z napolitanskimi picami, antipasti, testeninami, sladicami in vinom. Meni, rezervacije in lokacija." />
-  <meta name="theme-color" content="#fff4df" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forno Lume · Demo picerija</title>
+  <meta name="description" content="Forno Lume je izmišljena picerija v Kopru. Oglej si vzorčni meni in preizkusi predogled rezervacije.">
+  <meta name="theme-color" content="#852a20">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="grain"></div>
-
-  <header class="topbar" id="top">
-    <a class="wordmark" href="#top" aria-label="Forno Lume home">
-      <span>Forno</span>
-      <i>Lume</i>
-    </a>
-
-    <div class="language-switcher" aria-label="Language switcher">
-      <button class="lang-btn" data-lang="en">EN</button>
-      <button class="lang-btn active" data-lang="sl">SL</button>
-      <button class="lang-btn" data-lang="it">IT</button>
+  <a class="skip-link" href="#main" data-i18n="skip">Preskoči na vsebino</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="#top">Forno <i>Lume</i></a>
+      <nav class="site-nav" aria-label="Glavna navigacija" data-i18n-label="navigation">
+        <a href="#menu" data-i18n="menuTitle">Meni</a>
+        <a href="#visit" data-i18n="visitTitle">Obisk</a>
+      </nav>
+      <div class="languages" role="group" aria-label="Jezik" data-i18n-label="language">
+        <button type="button" data-lang="sl" lang="sl" aria-label="Slovenščina" aria-pressed="true">SL</button>
+        <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+        <button type="button" data-lang="it" lang="it" aria-label="Italiano" aria-pressed="false">IT</button>
+      </div>
     </div>
-
-    <button class="menu-toggle" aria-label="Odpri navigacijo" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-
-    <nav class="nav">
-      <a href="#menu" data-i18n="navMenu">Meni</a>
-      <a href="#visit" data-i18n="navVisit">Obisk</a>
-      <a href="#reviews" data-i18n="navReviews">Mnenja</a>
-      <a href="#reserve" class="nav-cta" data-i18n="navReserve">Rezerviraj</a>
-    </nav>
   </header>
 
-  <main>
-    <section class="hero">
+  <main id="main" tabindex="-1">
+    <section class="wrap hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="kicker" data-i18n="heroKicker">Pizzeria / Stari Koper / Od 11:30</p>
-        <h1 data-i18n="heroTitle">Pizza, ki pride na mizo še z vonjem po peči.</h1>
-        <p class="lead" data-i18n="heroLead">
-          Forno Lume je pizzeria za preprost večer: tanko testo, vroča peč, par svežih sestavin in miza, ki se hitro napolni z dobrimi stvarmi.
-        </p>
-
+        <p class="eyebrow demo-label" data-i18n="demoLabel">Portfolio · izmišljena picerija</p>
+        <h1 id="hero-title">Forno <i>Lume</i></h1>
+        <p class="hero-location" data-i18n="heroLocation">Picerija v starem Kopru</p>
+        <p class="hero-description" data-i18n="heroDescription">Napolitanske pice iz kamnite peči, sveže testenine in domači tiramisù.</p>
         <div class="hero-actions">
-          <a href="#menu" class="button button-dark" data-i18n="ctaMenu">Odpri meni</a>
-          <a href="#reserve" class="button button-outline" data-i18n="ctaReserve">Rezerviraj mizo</a>
+          <a class="button button-primary" href="#menu" data-i18n="menuLink">Poglej meni</a>
+          <a class="text-link" href="#visit">
+            <span data-i18n="visitLink">Ure in rezervacije</span>
+            <span aria-hidden="true">↘</span>
+          </a>
         </div>
       </div>
+      <img class="hero-photo" src="assets/funghi.jpg" width="1283" height="1600"
+        alt="Roke držijo sveže pečeno pico ob oknu." data-i18n-alt="heroAlt" fetchpriority="high">
+    </section>
 
-      <div class="hero-image">
-        <img src="assets/margherita.jpg" alt="Neapeljska pica" />
-        <div class="open-card">
-          <span data-i18n="today">danes</span>
-          <strong>11:30–22:30</strong>
-          <a href="tel:+38651234567">+386 51 234 567</a>
+    <section class="menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="wrap">
+        <div class="menu-intro">
+          <h2 id="menu-title" data-i18n="menuTitle">Meni</h2>
+          <p data-i18n="menuNote">Vzorčni meni in cene. Izberi jed za podrobnosti.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Kategorije menija" data-i18n-label="menuCategories" hidden>
+          <button class="filter" type="button" data-filter="all" aria-pressed="true" data-i18n="filterAll">Vse</button>
+          <button class="filter" type="button" data-filter="pizza" aria-pressed="false" data-i18n="filterPizza">Pice</button>
+          <button class="filter" type="button" data-filter="starter" aria-pressed="false" data-i18n="filterStarter">Antipasti</button>
+          <button class="filter" type="button" data-filter="pasta" aria-pressed="false" data-i18n="filterPasta">Testenine</button>
+          <button class="filter" type="button" data-filter="sweet" aria-pressed="false" data-i18n="filterSweet">Sladice</button>
+        </div>
+
+        <div class="menu-groups" data-filter="all">
+          <section class="menu-group" data-category="pizza">
+            <h3 class="menu-category" data-i18n="filterPizza">Pice</h3>
+            <ul class="dish-list">
+              <li>
+                <button class="menu-line" type="button" data-dish="margherita" aria-haspopup="dialog" aria-labelledby="name-margherita price-margherita" aria-describedby="description-margherita">
+                  <img class="dish-thumb" src="assets/margherita-menu.webp" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  <span class="dish-name" id="name-margherita" lang="it">Margherita DOP</span>
+                  <span class="dish-description" id="description-margherita" data-i18n="margherita">San Marzano, fior di latte, bazilika, oljčno olje.</span>
+                  <span class="dish-price" id="price-margherita" data-price="9.50">9,50&nbsp;€</span>
+                  <span class="dish-more" aria-hidden="true">+</span>
+                </button>
+              </li>
+              <li>
+                <button class="menu-line" type="button" data-dish="diavola" aria-haspopup="dialog" aria-labelledby="name-diavola price-diavola" aria-describedby="description-diavola">
+                  <img class="dish-thumb" src="assets/diavola-menu.webp" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  <span class="dish-name" id="name-diavola" lang="it">Diavola</span>
+                  <span class="dish-description" id="description-diavola" data-i18n="diavola">Pikantna salama, mocarela, paradižnik, čilijevo olje.</span>
+                  <span class="dish-price" id="price-diavola" data-price="11.80">11,80&nbsp;€</span>
+                  <span class="dish-more" aria-hidden="true">+</span>
+                </button>
+              </li>
+              <li>
+                <button class="menu-line" type="button" data-dish="burrata" aria-haspopup="dialog" aria-labelledby="name-burrata price-burrata" aria-describedby="description-burrata">
+                  <img class="dish-thumb" src="assets/burrata-menu.webp" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  <span class="dish-name" id="name-burrata" lang="it">Burrata e Prosciutto</span>
+                  <span class="dish-description" id="description-burrata" data-i18n="burrata">Burrata, surovi pršut, rukola, parmezan, paradižnikova omaka.</span>
+                  <span class="dish-price" id="price-burrata" data-price="14.50">14,50&nbsp;€</span>
+                  <span class="dish-more" aria-hidden="true">+</span>
+                </button>
+              </li>
+              <li>
+                <button class="menu-line" type="button" data-dish="funghi" aria-haspopup="dialog" aria-labelledby="name-funghi price-funghi" aria-describedby="description-funghi">
+                  <img class="dish-thumb" src="assets/funghi-menu.webp" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  <span class="dish-name" id="name-funghi" lang="it">Funghi Tartufata</span>
+                  <span class="dish-description" id="description-funghi" data-i18n="funghi">Gobe, mocarela, tartufna krema, peteršilj.</span>
+                  <span class="dish-price" id="price-funghi" data-price="13.20">13,20&nbsp;€</span>
+                  <span class="dish-more" aria-hidden="true">+</span>
+                </button>
+              </li>
+              <li>
+                <button class="menu-line" type="button" data-dish="verdure" aria-haspopup="dialog" aria-labelledby="name-verdure price-verdure" aria-describedby="description-verdure">
+                  <img class="dish-thumb" src="assets/verdure-menu.webp" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  <span class="dish-name" id="name-verdure" lang="it">Verdure</span>
+                  <span class="dish-description" id="description-verdure" data-i18n="verdure">Sezonska zelenjava, mocarela, paradižnik, bazilika.</span>
+                  <span class="dish-price" id="price-verdure" data-price="12.00">12,00&nbsp;€</span>
+                  <span class="dish-more" aria-hidden="true">+</span>
+                </button>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-group" data-category="starter">
+            <h3 class="menu-category" data-i18n="filterStarter">Antipasti</h3>
+            <ul class="dish-list">
+              <li>
+                <button class="menu-line" type="button" data-dish="bruschetta" aria-haspopup="dialog" aria-labelledby="name-bruschetta price-bruschetta" aria-describedby="description-bruschetta">
+                  <img class="dish-thumb" src="assets/bruschetta-menu.webp" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  <span class="dish-name" id="name-bruschetta" lang="it">Bruschetta Trio</span>
+                  <span class="dish-description" id="description-bruschetta" data-i18n="bruschetta">Paradižnik, burrata, olive, zeliščno olje.</span>
+                  <span class="dish-price" id="price-bruschetta" data-price="7.90">7,90&nbsp;€</span>
+                  <span class="dish-more" aria-hidden="true">+</span>
+                </button>
+              </li>
+              <li>
+                <button class="menu-line" type="button" data-dish="salad" aria-haspopup="dialog" aria-labelledby="name-salad price-salad" aria-describedby="description-salad">
+                  <img class="dish-thumb" src="assets/salad-menu.webp" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  <span class="dish-name" id="name-salad" lang="it">Insalata Mediterranea</span>
+                  <span class="dish-description" id="description-salad" data-i18n="salad">Rukola, češnjev paradižnik, mocarela, olive, limonin preliv.</span>
+                  <span class="dish-price" id="price-salad" data-price="9.20">9,20&nbsp;€</span>
+                  <span class="dish-more" aria-hidden="true">+</span>
+                </button>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-group" data-category="pasta">
+            <h3 class="menu-category" data-i18n="filterPasta">Testenine</h3>
+            <ul class="dish-list">
+              <li>
+                <button class="menu-line" type="button" data-dish="ragu" aria-haspopup="dialog" aria-labelledby="name-ragu price-ragu" aria-describedby="description-ragu">
+                  <img class="dish-thumb" src="assets/ragu-menu.webp" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  <span class="dish-name" id="name-ragu" lang="it">Tagliatelle al Ragù</span>
+                  <span class="dish-description" id="description-ragu" data-i18n="ragu">Počasi kuhana mesna omaka, parmezan, sveža zelišča.</span>
+                  <span class="dish-price" id="price-ragu" data-price="12.90">12,90&nbsp;€</span>
+                  <span class="dish-more" aria-hidden="true">+</span>
+                </button>
+              </li>
+              <li>
+                <button class="menu-line" type="button" data-dish="gnocchi" aria-haspopup="dialog" aria-labelledby="name-gnocchi price-gnocchi" aria-describedby="description-gnocchi">
+                  <img class="dish-thumb" src="assets/gnocchi-menu.webp" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  <span class="dish-name" id="name-gnocchi" lang="it">Gnocchi al Pesto</span>
+                  <span class="dish-description" id="description-gnocchi" data-i18n="gnocchi">Krompirjevi njoki, bazilikin pesto, pinjole, parmezan.</span>
+                  <span class="dish-price" id="price-gnocchi" data-price="11.80">11,80&nbsp;€</span>
+                  <span class="dish-more" aria-hidden="true">+</span>
+                </button>
+              </li>
+            </ul>
+          </section>
+          <section class="menu-group" data-category="sweet">
+            <h3 class="menu-category" data-i18n="filterSweet">Sladice</h3>
+            <ul class="dish-list">
+              <li>
+                <button class="menu-line" type="button" data-dish="tiramisu" aria-haspopup="dialog" aria-labelledby="name-tiramisu price-tiramisu" aria-describedby="description-tiramisu">
+                  <img class="dish-thumb" src="assets/tiramisu-menu.webp" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  <span class="dish-name" id="name-tiramisu" lang="it">Tiramisù della Casa</span>
+                  <span class="dish-description" id="description-tiramisu" data-i18n="tiramisu">Maskarpone, espresso, kakav, biskvitni piškoti.</span>
+                  <span class="dish-price" id="price-tiramisu" data-price="5.80">5,80&nbsp;€</span>
+                  <span class="dish-more" aria-hidden="true">+</span>
+                </button>
+              </li>
+              <li>
+                <button class="menu-line" type="button" data-dish="panna" aria-haspopup="dialog" aria-labelledby="name-panna price-panna" aria-describedby="description-panna">
+                  <img class="dish-thumb" src="assets/panna-menu.webp" alt="" width="80" height="80" loading="lazy" decoding="async">
+                  <span class="dish-name" id="name-panna" lang="it">Panna Cotta</span>
+                  <span class="dish-description" id="description-panna" data-i18n="panna">Vanilja, jagodni preliv, hrustljavi mandlji.</span>
+                  <span class="dish-price" id="price-panna" data-price="5.40">5,40&nbsp;€</span>
+                  <span class="dish-more" aria-hidden="true">+</span>
+                </button>
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
     </section>
 
-    <section class="ticker" aria-label="Ingredients">
-      <div class="ticker-track">
-        <span data-i18n="tick1">48h testo</span>
-        <span data-i18n="tick2">San Marzano</span>
-        <span data-i18n="tick3">Fior di latte</span>
-        <span data-i18n="tick4">Sveža bazilika</span>
-        <span data-i18n="tick5">Vroča kamnita peč</span>
-        <span data-i18n="tick6">Tiramisù della casa</span>
-        <span data-i18n="tick7">Pizza za s seboj</span>
-        <span data-i18n="tick8">Rezervacije za skupine</span>
-      </div>
-    </section>
-
-    <section class="intro-grid section">
-      <article class="intro-card">
-        <span class="number">01</span>
-        <h2 data-i18n="intro1Title">Hitro kosilo</h2>
-        <p data-i18n="intro1Text">Pica, solata ali testenine, ko si v mestu in želiš nekaj konkretnega brez dolgega čakanja.</p>
-      </article>
-      <article class="intro-card">
-        <span class="number">02</span>
-        <h2 data-i18n="intro2Title">Večer s prijatelji</h2>
-        <p data-i18n="intro2Text">Miza za deljenje: antipasti, več pic, vino, sladica in malo italijanskega hrupa.</p>
-      </article>
-      <article class="intro-card">
-        <span class="number">03</span>
-        <h2 data-i18n="intro3Title">Za s seboj</h2>
-        <p data-i18n="intro3Text">Pokliči 20–30 minut prej in pica te počaka ob uri, ki ti ustreza.</p>
-      </article>
-    </section>
-
-    <section class="menu-section section" id="menu">
-      <div class="section-title split">
-        <div>
-          <p class="kicker" data-i18n="menuKicker">Meni</p>
-          <h2 data-i18n="menuTitle">Klikni jed in poglej, kaj pride na mizo.</h2>
-        </div>
-        <p data-i18n="menuLead">
-          Meni je kratek namenoma: manj odločanja, boljši ritem v kuhinji in sestavine, ki imajo prostor, da pridejo do izraza.
-        </p>
-      </div>
-
-      <div class="menu-board">
-        <aside class="menu-sidebar">
-          <button class="filter active" data-filter="all" data-i18n="filterAll">Vse</button>
-          <button class="filter" data-filter="pizza" data-i18n="filterPizza">Pice</button>
-          <button class="filter" data-filter="pasta" data-i18n="filterPasta">Testenine</button>
-          <button class="filter" data-filter="starter" data-i18n="filterStarter">Antipasti</button>
-          <button class="filter" data-filter="sweet" data-i18n="filterSweet">Sladice</button>
-        </aside>
-
-        <div class="menu-items">
-          <button class="menu-line" data-category="pizza" data-dish="margherita">
-            <div><h3>Margherita DOP</h3><p data-i18n="dish1">San Marzano, fior di latte, bazilika, oljčno olje.</p></div><strong>9.50</strong>
-          </button>
-          <button class="menu-line" data-category="pizza" data-dish="diavola">
-            <div><h3>Diavola</h3><p data-i18n="dish2">Pikantna salama, mozzarella, paradižnik, čili olje.</p></div><strong>11.80</strong>
-          </button>
-          <button class="menu-line signature" data-category="pizza" data-dish="burrata">
-            <div><small data-i18n="mostOrdered">najbolj naročeno</small><h3>Burrata e Prosciutto</h3><p data-i18n="dish3">Burrata, pršut crudo, rukola, parmezan, paradižnikova osnova.</p></div><strong>14.50</strong>
-          </button>
-          <button class="menu-line" data-category="pizza" data-dish="funghi">
-            <div><h3>Funghi Tartufata</h3><p data-i18n="dish4">Gobe, mozzarella, tartufna krema, peteršilj.</p></div><strong>13.20</strong>
-          </button>
-          <button class="menu-line" data-category="pizza" data-dish="verdure">
-            <div><h3>Verdure</h3><p data-i18n="dish5">Sezonska zelenjava, mozzarella, paradižnik, bazilika.</p></div><strong>12.00</strong>
-          </button>
-          <button class="menu-line" data-category="pasta" data-dish="ragu">
-            <div><h3>Tagliatelle al Ragù</h3><p data-i18n="dish6">Počasno kuhana mesna omaka, parmezan, sveža zelišča.</p></div><strong>12.90</strong>
-          </button>
-          <button class="menu-line" data-category="pasta" data-dish="gnocchi">
-            <div><h3>Gnocchi Pesto Verde</h3><p data-i18n="dish7">Krompirjevi njoki, bazilikin pesto, pinjole, parmezan.</p></div><strong>11.80</strong>
-          </button>
-          <button class="menu-line" data-category="starter" data-dish="bruschetta">
-            <div><h3>Bruschetta Trio</h3><p data-i18n="dish8">Paradižnik, burrata, olive, zeliščno olje.</p></div><strong>7.90</strong>
-          </button>
-          <button class="menu-line" data-category="starter" data-dish="salad">
-            <div><h3>Insalata Mediterranea</h3><p data-i18n="dish9">Rukola, češnjev paradižnik, mozzarella, olive, limonin preliv.</p></div><strong>9.20</strong>
-          </button>
-          <button class="menu-line" data-category="sweet" data-dish="tiramisu">
-            <div><h3>Tiramisù della Casa</h3><p data-i18n="dish10">Mascarpone, espresso, kakav, savoiardi.</p></div><strong>5.80</strong>
-          </button>
-          <button class="menu-line" data-category="sweet" data-dish="panna">
-            <div><h3>Panna Cotta</h3><p data-i18n="dish11">Vanilija, jagodni preliv, hrustljavi mandlji.</p></div><strong>5.40</strong>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <section class="visit-section section" id="visit">
-      <div class="visit-image">
-        <img src="assets/diavola.jpg" alt="Miza v restavraciji" />
-      </div>
-      <div class="visit-panel">
-        <p class="kicker" data-i18n="visitKicker">Obisk</p>
-        <h2 data-i18n="visitTitle">Pridi na večerjo ali naroči za s seboj.</h2>
-        <div class="visit-list">
-          <div><span data-i18n="addressLabel">naslov</span><strong>Gregorčičeva ulica 12, 6000 Koper</strong></div>
-          <div><span data-i18n="phoneLabel">telefon</span><strong>+386 51 234 567</strong></div>
-          <div><span data-i18n="hoursLabel">urnik</span><strong data-i18n="hoursText">Pon–čet 11:30–22:00<br>Pet–sob 11:30–22:30<br>Ned 12:00–21:30</strong></div>
-        </div>
-      </div>
-    </section>
-    <section class="insights-section section" id="stories">
-      <div class="section-title split">
-        <div>
-          <p class="kicker" data-i18n="storiesKicker">Miza ni samo za hrano</p>
-          <h2 data-i18n="storiesTitle">Trije kratki namigi, ki pomagajo izbrati večer.</h2>
-        </div>
-        <p data-i18n="storiesLead">Namesto prazne galerije smo dodali mini zgodbe: uporabnik dobi občutek, kaj naročiti, kdaj priti in zakaj so določene jedi na meniju.</p>
-      </div>
-
-      <div class="insight-grid">
-        <button class="insight-card large" type="button" data-article="dough">
-          <img src="assets/margherita.jpg" alt="Pizza z rahlim robom" loading="lazy" />
-          <div><span data-i18n="story1Kicker">kuhinja</span><h3 data-i18n="story1Title">Zakaj 48-urno testo naredi pico lažjo.</h3><p data-i18n="story1Text">Kratek vodič za gosta, ki ne želi samo lepe slike, ampak razlog za obisk.</p></div>
-        </button>
-        <button class="insight-card" type="button" data-article="sharing">
-          <img src="assets/burrata.jpg" alt="Pizza za deljenje" loading="lazy" />
-          <div><span data-i18n="story2Kicker">priporočilo</span><h3 data-i18n="story2Title">Kaj naročiti, če prideta dva ali štirje.</h3><p data-i18n="story2Text">Antipasti, ena signature pica, ena klasika in sladek zaključek.</p></div>
-        </button>
-        <button class="insight-card" type="button" data-article="tiramisu">
-          <img src="assets/tiramisu.jpg" alt="Tiramisu" loading="lazy" />
-          <div><span data-i18n="story3Kicker">sladica</span><h3 data-i18n="story3Title">Tiramisù kot test dobre italijanske kuhinje.</h3><p data-i18n="story3Text">Zakaj preprosta sladica pove veliko o tempu lokala.</p></div>
-        </button>
-      </div>
-    </section>
-
-    <section class="reviews-section" id="reviews">
-      <div class="reviews-copy">
-        <p class="kicker" data-i18n="reviewsKicker">Mnenja gostov</p>
-        <h2 data-i18n="reviewsTitle">4.8 povprečna ocena iz 186 mnenj.</h2>
-        <p data-i18n="reviewsLead">Gostje največkrat omenjajo rahlo testo, hitro postrežbo, prijeten večerni ambient in pice za deljenje.</p>
-
-        <div class="score-box">
-          <strong>4.8</strong>
-          <span>★★★★★</span>
-          <small data-i18n="scoreText">186 ocen</small>
-        </div>
-      </div>
-
-      <div class="reviews-panel">
-        <article>
-          <span>★★★★★</span>
-          <p data-i18n="review1">“Testo je bilo lahko, rob lepo zapečen, burrata pica pa res najboljša izbira za deljenje.”</p>
-          <strong>Eva K.</strong>
-        </article>
-        <article>
-          <span>★★★★★</span>
-          <p data-i18n="review2">“Prijeten prostor za večerjo v mestu. Kratek meni, ampak ravno dovolj izbire.”</p>
-          <strong>Marko R.</strong>
-        </article>
-        <article>
-          <span>★★★★☆</span>
-          <p data-i18n="review3">“Hitro naročilo za s seboj, pica še vroča in dobra tudi po poti domov.”</p>
-          <strong>Giulia P.</strong>
-        </article>
-      </div>
-    </section>
-
-    <section class="reserve-section section" id="reserve">
-      <div class="reserve-box">
-        <p class="kicker" data-i18n="reserveKicker">Rezervacije</p>
-        <h2 data-i18n="reserveTitle">Mizo rezerviraš v enem klicu.</h2>
-        <p data-i18n="reserveText">Za petek, soboto in skupine nad 6 oseb priporočamo rezervacijo. Za naročila za s seboj pokliči 20–30 minut prej.</p>
-        <div class="reserve-actions">
-          <a class="button button-dark" href="tel:+38651234567" data-i18n="reserveCall">Pokliči zdaj</a>
-          <a class="button button-outline" href="mailto:ciao@fornolume.si" data-i18n="reserveEmail">Pošlji email</a>
-          <a class="button button-map" target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Gregor%C4%8Di%C4%8Deva%20ulica%2012%2C%206000%20Koper%2C%20Slovenia" data-i18n="reserveMap">Odpri zemljevid</a>
+    <section class="visit-section" id="visit" aria-labelledby="visit-title">
+      <div class="wrap visit-grid">
+        <img class="visit-photo" src="assets/burrata.jpg" width="1600" height="1067" loading="lazy" decoding="async"
+          alt="Dve roki si z mize vzameta kosa pice." data-i18n-alt="visitAlt">
+        <div class="visit-copy">
+          <h2 id="visit-title" data-i18n="visitTitle">Obisk</h2>
+          <p class="visit-location" data-i18n="visitLocation">Staro mestno jedro Kopra</p>
+          <p class="eyebrow" data-i18n="hoursLabel">Primer odpiralnega časa</p>
+          <dl class="hours">
+            <div><dt data-i18n="weekdays">Ponedeljek–četrtek</dt><dd>11.30–22.00</dd></div>
+            <div><dt data-i18n="weekend">Petek–sobota</dt><dd>11.30–22.30</dd></div>
+            <div><dt data-i18n="sunday">Nedelja</dt><dd>12.00–21.30</dd></div>
+          </dl>
+          <div id="reserve">
+            <button class="button button-light" type="button" id="bookingTrigger" aria-haspopup="dialog" aria-describedby="booking-note" data-i18n="bookButton" hidden>Preizkusi rezervacijo</button>
+            <p class="visit-note" id="booking-note" data-i18n="bookNote">To je prikaz rezervacije za izmišljeno picerijo.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <a class="wordmark" href="#top"><span>Forno</span><i>Lume</i></a>
-    <p data-i18n="footerText">Demo spletna stran za portfolio. Pizzeria, naslov, telefon, ocene in podatki so izmišljeni.</p>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p data-i18n="footerText">Forno Lume je demo spletna stran za izmišljeno picerijo.</p>
+      <a class="text-link" href="../index.html">
+        <span data-i18n="portfolioLink">Portfolio LocalWeb</span>
+        <span aria-hidden="true">↗</span>
+      </a>
+    </div>
   </footer>
 
-  <div class="mobile-bar">
-    <a href="tel:+38651234567" data-i18n="mobileCall">Klic</a>
-    <a href="#menu" data-i18n="mobileMenu">Meni</a>
-    <a target="_blank" rel="noreferrer" href="https://maps.google.com/?q=Gregor%C4%8Di%C4%8Deva%20ulica%2012%2C%206000%20Koper%2C%20Slovenia" data-i18n="mobileDirections">Pot</a>
-  </div>
-
-  <div class="dish-modal" id="dishModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="dishModalTitle">
-    <div class="dish-backdrop" data-close-dish></div>
-    <div class="dish-panel">
-      <button class="dish-close" type="button" aria-label="Close" data-close-dish>×</button>
-      <div class="dish-photo"><img id="dishModalImage" alt="" /></div>
-      <div class="dish-info">
-        <span id="dishModalCategory"></span>
-        <h2 id="dishModalTitle"></h2>
-        <p id="dishModalText"></p>
-        <strong id="dishModalPrice"></strong>
-        <div class="dish-actions">
-          <a href="tel:+38651234567" class="button button-dark" data-i18n="dishCall">Naroči / rezerviraj</a>
-          <button class="button button-outline" type="button" data-close-dish data-i18n="dishBack">Nazaj na meni</button>
-        </div>
-      </div>
+  <dialog class="dialog" id="dishModal" aria-labelledby="dishModalTitle">
+    <div class="dialog-content">
+      <form method="dialog" class="dialog-close-form">
+        <button class="dialog-close" type="submit" aria-label="Zapri" data-i18n-label="close" autofocus>×</button>
+      </form>
+      <p class="eyebrow" id="dishModalCategory"></p>
+      <h2 id="dishModalTitle" lang="it"></h2>
+      <p id="dishModalText"></p>
+      <p class="detail-price" id="dishModalPrice"></p>
+      <figure class="dish-figure" hidden>
+        <figcaption data-i18n="illustration">Simbolična fotografija</figcaption>
+      </figure>
     </div>
-  </div>
+  </dialog>
 
-  <div class="article-modal" id="articleModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="articleTitle">
-    <div class="article-backdrop" data-close-article></div>
-    <div class="article-panel">
-      <button class="article-close" type="button" aria-label="Close" data-close-article>×</button>
-      <div class="article-photo"><img id="articleImage" alt="" /></div>
-      <article class="article-copy">
-        <span id="articleLabel"></span>
-        <h2 id="articleTitle"></h2>
-        <p id="articleIntro"></p>
-        <ul id="articlePoints"></ul>
-        <div class="article-actions">
-          <a href="#menu" class="button button-dark" data-close-article data-i18n="articleMenu">Poglej meni</a>
-          <button class="button button-outline" type="button" data-close-article data-i18n="articleClose">Zapri</button>
+  <dialog class="dialog" id="bookingModal" aria-labelledby="booking-title" aria-describedby="booking-description">
+    <div class="dialog-content">
+      <form method="dialog" class="dialog-close-form">
+        <button class="dialog-close" type="submit" aria-label="Zapri" data-i18n-label="close">×</button>
+      </form>
+      <h2 id="booking-title" data-i18n="bookingTitle">Predogled rezervacije</h2>
+      <p id="booking-description" data-i18n="bookingDescription">Izberi število oseb in vzorčni termin. Izbira ostane na tej strani.</p>
+      <form id="bookingForm">
+        <div class="booking-fields">
+          <label>
+            <span data-i18n="guestsLabel">Število oseb</span>
+            <select id="guestCount" autofocus>
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+          </label>
+          <label>
+            <span data-i18n="slotLabel">Termin</span>
+            <select id="bookingSlot">
+              <option value="fridaySlot" data-i18n="fridaySlot">Petek ob 19.00</option>
+              <option value="saturdaySlot" data-i18n="saturdaySlot">Sobota ob 20.00</option>
+            </select>
+          </label>
         </div>
-      </article>
+        <button type="submit" class="button button-primary" data-i18n="showSummary">Prikaži povzetek</button>
+        <p class="booking-summary" id="bookingSummary" role="status" aria-atomic="true"></p>
+      </form>
     </div>
-  </div>
-
-  <script src="script.js"></script>
+  </dialog>
 </body>
 </html>

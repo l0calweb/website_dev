@@ -1,33 +1,20 @@
 const translations = {
   sl: {
+    mobileTrial: "Prvi obisk",
+    portfolioLink: "Nazaj na LocalWeb",
+    demoVisit: "To je prikaz prvega obiska. Rezervacije niso na voljo.",
+    demoLabel: "Demo za izmišljen fitnes",
     navPrograms: "Programi",
     navSchedule: "Urnik",
     navPricing: "Članarine",
-    navTrial: "Brezplačen obisk",
-    heroKicker: "Ljubljana · funkcionalni trening center",
-    heroTitle: "Treniraj pametno. Premikaj se močneje.",
-    heroLead: "VOLT združuje odprti gym, vodene treninge, osebno trenerstvo in mobilnost v sistem, ki ga lahko slediš tudi ob polnem urniku.",
-    heroPrimary: "Rezerviraj brezplačen trening",
-    heroSecondary: "Poglej urnik",
-    dashLive: "danes v klubu",
-    dashClass: "VOLT Strength",
-    dashCoach: "Trener: Maja · 6 prostih mest",
-    metricAccess: "dostop za člane",
-    metricPrograms: "programov",
-    metricRating: "ocena članov",
-    strip1: "Strength",
-    strip2: "HIIT",
-    strip3: "Mobility",
-    strip4: "Personal coaching",
-    strip5: "Open gym",
-    strip6: "Nutrition check-in",
-    strip7: "Small groups",
-    introTitle1: "Sistem, ne naključni treningi.",
-    introText1: "Treningi so razdeljeni po ciljih: moč, kondicija, tehnika in regeneracija. Tako napredek ni odvisen od motivacije tistega dne.",
-    introTitle2: "Majhne skupine, več popravkov.",
-    introText2: "Trener vidi tvojo tehniko, prilagodi vaje in poskrbi, da trening ni samo težek, ampak tudi smiseln.",
+    navTrial: "Prvi obisk",
+    heroKicker: "Ljubljana · funkcionalna vadba",
+    heroTitle: "Treniraj z načrtom.",
+    heroLead: "Vodene vadbe v majhnih skupinah, samostojni trening in osebno trenerstvo.",
+    heroPrimary: "Poglej urnik",
+    heroSecondary: "Prvi obisk",
     programsKicker: "Programi",
-    programsTitle: "Izberi način treninga, ki se ujema s tvojim ciljem.",
+    programsTitle: "Programi vadbe",
     program1Tag: "moč",
     program1Title: "VOLT Strength",
     program1Text: "Počepi, deadlift, potiski, kontrolirana tehnika in progresivno nalaganje.",
@@ -45,29 +32,22 @@ const translations = {
     modalDuration: "Trajanje",
     modalLevel: "Intenzivnost",
     modalSchedule: "Poglej termine",
-    modalTrial: "Rezerviraj prvi obisk",
-    performanceKicker: "Zakaj VOLT",
-    performanceTitle: "Merljiv napredek brez kaosa.",
-    performanceText: "Ob prvem obisku naredimo kratek check-in: cilj, izkušnje, gibljivost in urnik. Nato dobiš predlog, kateri treningi imajo največ smisla zate.",
-    bar1: "Moč",
-    bar2: "Kondicija",
-    bar3: "Mobilnost",
-    bar4: "Doslednost",
+    modalTrial: "O prvem obisku",
     scheduleKicker: "Urnik",
-    scheduleTitle: "Izberi dan. Najdi trening.",
+    scheduleTitle: "Tedenski urnik",
     dayMon: "Pon",
     dayTue: "Tor",
     dayWed: "Sre",
     dayThu: "Čet",
     dayFri: "Pet",
     session1: "Kratek, intenziven start dneva: intervali, core, mobilnost.",
-    session2: "Tehnika, glavne dvige in dodatne vaje za moč.",
+    session2: "Tehnika osnovnih dvigov in dodatne vaje za moč.",
     session3: "Cardio postaje, kettlebelli, tempo in finiš.",
     session4: "Gibljivost, dihanje, stabilnost in regeneracija.",
     session5: "Boksarski elementi, footwork in kondicijski del.",
-    bookSmall: "Rezerviraj",
+    bookSmall: "Prvi obisk",
     pricingKicker: "Članarine",
-    pricingTitle: "Plačaj za ritem, ki ga res uporabljaš.",
+    pricingTitle: "Paketi članarin",
     monthly: "Mesečno",
     annual: "Letno -15%",
     plan1Name: "Open Gym",
@@ -83,57 +63,45 @@ const translations = {
     plan3a: "4 osebni treningi",
     plan3b: "Individualen plan",
     plan3c: "Tedenski check-in",
-    choosePlan: "Izberi paket",
     trainerKicker: "Trenerji",
-    trainerTitle: "Trening ni test ega. Je proces.",
-    trainerText: "Naši trenerji ne kričijo zato, da bi trening izgledal težji. Popravijo tehniko, prilagodijo obremenitev in poskrbijo, da veš, zakaj delaš določeno vajo.",
-    coach1: "strength & mobility",
-    coach2: "HIIT & conditioning",
-    coach3: "personal coaching",
+    trainerTitle: "Spoznaj trenerje",
+    trainerText: "Trenerji ti pomagajo pri tehniki in prilagodijo obremenitev tvoji pripravljenosti.",
+    coach1: "Moč in gibljivost",
+    coach2: "HIIT in kondicija",
+    coach3: "Osebno trenerstvo",
+    coachProfile: "Profil",
+    coachDemo: "Izmišljen profil",
+    coachIntroLabel: "Na prvem treningu",
+    coachClose: "Zapri",
+    majaBio: "Maja ima 6 let izkušenj z vadbo za moč in gibljivost. Začetnikom pomaga osvojiti tehniko počepa in mrtvega dviga.",
+    majaIntro: "Z nekaj osnovnimi gibi preverita gibljivost. Nato skupaj izbereta različico počepa in primerno obremenitev.",
+    lukaBio: "Luka ima 5 let izkušenj z vodenjem intervalnih vadb. Vaje in tempo prilagodi kondiciji posameznika.",
+    lukaIntro: "Po ogrevanju preizkusita kratek krog vaj. Luka prilagodi dolžino intervalov in odmorov glede na tvoj tempo.",
+    ninaBio: "Nina ima 7 let izkušenj z osebnim trenerstvom. Osredotoča se na začetnike in ljudi, ki se po premoru vračajo k vadbi.",
+    ninaIntro: "Pogovorita se o ciljih in času, ki ga imaš za vadbo. Nato preizkusita nekaj vaj za tvoj tedenski načrt.",
     contactKicker: "Prvi obisk",
-    contactTitle: "Pridi na brezplačen uvodni trening.",
-    contactText: "Povej nam cilj, izberi termin in pripravljeni bomo. Uvodni obisk vključuje kratek posvet, trening in predlog paketa.",
-    callNow: "Pokliči zdaj",
-    sendEmail: "Pošlji email",
-    openMap: "Odpri zemljevid",
-    address: "Naslov",
-    phone: "Telefon",
-    hours: "Odprto",
-    openHours: "Pon–pet 06:00–23:00<br>Sob–ned 08:00–20:00",
-    footerNote: "Demo spletna stran za portfolio. Ime, lokacija, telefon in podatki so izmišljeni.",
-    mobileCall: "Klic",
+    contactTitle: "Brezplačen uvodni trening",
+    contactText: "Prvi obisk vključuje pogovor o ciljih, vodeno vadbo in predlog programa.",
+    footerNote: "VOLT je izmišljen fitnes za prikaz spletne strani.",
     mobileSchedule: "Urnik",
     mobilePricing: "Paketi"
   },
   en: {
+    mobileTrial: "First visit",
+    portfolioLink: "Back to LocalWeb",
+    demoVisit: "This is a preview of the first visit. Bookings are unavailable.",
+    demoLabel: "Demo for a fictional gym",
     navPrograms: "Programs",
     navSchedule: "Schedule",
     navPricing: "Pricing",
-    navTrial: "Free trial",
-    heroKicker: "Ljubljana · functional training center",
-    heroTitle: "Train smart. Move stronger.",
-    heroLead: "VOLT combines open gym, guided classes, personal coaching and mobility into a system you can follow even with a full schedule.",
-    heroPrimary: "Book a free session",
-    heroSecondary: "View schedule",
-    dashLive: "today at the club",
-    dashClass: "VOLT Strength",
-    dashCoach: "Coach: Maja · 6 spots left",
-    metricAccess: "member access",
-    metricPrograms: "programs",
-    metricRating: "member rating",
-    strip1: "Strength",
-    strip2: "HIIT",
-    strip3: "Mobility",
-    strip4: "Personal coaching",
-    strip5: "Open gym",
-    strip6: "Nutrition check-in",
-    strip7: "Small groups",
-    introTitle1: "A system, not random workouts.",
-    introText1: "Sessions are organized by goals: strength, conditioning, technique and recovery. Progress does not depend on that day’s motivation.",
-    introTitle2: "Small groups, more corrections.",
-    introText2: "The coach sees your technique, adjusts exercises and makes sure the workout is not only hard, but meaningful.",
+    navTrial: "First visit",
+    heroKicker: "Ljubljana · functional training",
+    heroTitle: "Train with a plan.",
+    heroLead: "Small-group classes, open gym and personal coaching.",
+    heroPrimary: "View schedule",
+    heroSecondary: "First visit",
     programsKicker: "Programs",
-    programsTitle: "Choose the training style that matches your goal.",
+    programsTitle: "Training programs",
     program1Tag: "strength",
     program1Title: "VOLT Strength",
     program1Text: "Squats, deadlifts, presses, controlled technique and progressive loading.",
@@ -151,16 +119,9 @@ const translations = {
     modalDuration: "Duration",
     modalLevel: "Intensity",
     modalSchedule: "View times",
-    modalTrial: "Book first visit",
-    performanceKicker: "Why VOLT",
-    performanceTitle: "Measurable progress without chaos.",
-    performanceText: "On your first visit we do a short check-in: goal, experience, mobility and schedule. Then you get a suggestion for the sessions that make the most sense.",
-    bar1: "Strength",
-    bar2: "Conditioning",
-    bar3: "Mobility",
-    bar4: "Consistency",
+    modalTrial: "About the first visit",
     scheduleKicker: "Schedule",
-    scheduleTitle: "Pick a day. Find a workout.",
+    scheduleTitle: "Weekly schedule",
     dayMon: "Mon",
     dayTue: "Tue",
     dayWed: "Wed",
@@ -171,9 +132,9 @@ const translations = {
     session3: "Cardio stations, kettlebells, pacing and a finish.",
     session4: "Flexibility, breathing, stability and recovery.",
     session5: "Boxing elements, footwork and a conditioning block.",
-    bookSmall: "Book",
+    bookSmall: "First visit",
     pricingKicker: "Pricing",
-    pricingTitle: "Pay for the rhythm you actually use.",
+    pricingTitle: "Membership plans",
     monthly: "Monthly",
     annual: "Yearly -15%",
     plan1Name: "Open Gym",
@@ -189,57 +150,45 @@ const translations = {
     plan3a: "4 personal sessions",
     plan3b: "Individual plan",
     plan3c: "Weekly check-in",
-    choosePlan: "Choose plan",
     trainerKicker: "Coaches",
-    trainerTitle: "Training is not an ego test. It is a process.",
-    trainerText: "Our coaches do not shout to make the workout look harder. They correct technique, adjust load and make sure you know why you are doing each exercise.",
-    coach1: "strength & mobility",
-    coach2: "HIIT & conditioning",
-    coach3: "personal coaching",
+    trainerTitle: "Meet the coaches",
+    trainerText: "Coaches help with technique and adapt the workload to your fitness level.",
+    coach1: "Strength and mobility",
+    coach2: "HIIT and conditioning",
+    coach3: "Personal coaching",
+    coachProfile: "Profile",
+    coachDemo: "Fictional profile",
+    coachIntroLabel: "Your first session",
+    coachClose: "Close",
+    majaBio: "Maja has six years of experience in strength and mobility training. She helps beginners learn how to squat and deadlift.",
+    majaIntro: "You’ll try a few basic movements to assess mobility, then choose a squat variation and a suitable weight together.",
+    lukaBio: "Luka has five years of experience leading interval workouts. He adjusts the exercises and pace to your fitness level.",
+    lukaIntro: "After warming up, you’ll try a short circuit. Luka adapts the intervals and rest periods to your pace.",
+    ninaBio: "Nina has seven years of experience in personal training. She works with beginners and people returning to exercise after a break.",
+    ninaIntro: "You’ll talk about your goals and how much time you can train, then try a few exercises for your weekly plan.",
     contactKicker: "First visit",
-    contactTitle: "Come for a free intro session.",
-    contactText: "Tell us your goal, choose a time and we will be ready. The intro visit includes a short consultation, workout and package recommendation.",
-    callNow: "Call now",
-    sendEmail: "Send email",
-    openMap: "Open map",
-    address: "Address",
-    phone: "Phone",
-    hours: "Open",
-    openHours: "Mon–Fri 06:00–23:00<br>Sat–Sun 08:00–20:00",
-    footerNote: "Portfolio demo website. Name, location, phone and details are fictional.",
-    mobileCall: "Call",
+    contactTitle: "Free intro session",
+    contactText: "The first visit includes a conversation about your goals, a guided workout and a suggested program.",
+    footerNote: "VOLT is a fictional gym created for this website demo.",
     mobileSchedule: "Schedule",
     mobilePricing: "Plans"
   },
   it: {
+    mobileTrial: "Prima visita",
+    portfolioLink: "Torna a LocalWeb",
+    demoVisit: "Questa è un’anteprima della prima visita. Le prenotazioni non sono disponibili.",
+    demoLabel: "Demo per una palestra immaginaria",
     navPrograms: "Programmi",
     navSchedule: "Orario",
     navPricing: "Prezzi",
-    navTrial: "Prova gratuita",
-    heroKicker: "Lubiana · centro di allenamento funzionale",
-    heroTitle: "Allenati meglio. Muoviti più forte.",
-    heroLead: "VOLT unisce palestra open gym, lezioni guidate, coaching personale e mobilità in un sistema che puoi seguire anche con una settimana piena.",
-    heroPrimary: "Prenota una prova gratuita",
-    heroSecondary: "Vedi orario",
-    dashLive: "oggi in palestra",
-    dashClass: "VOLT Strength",
-    dashCoach: "Coach: Maja · 6 posti liberi",
-    metricAccess: "accesso soci",
-    metricPrograms: "programmi",
-    metricRating: "valutazione soci",
-    strip1: "Forza",
-    strip2: "HIIT",
-    strip3: "Mobilità",
-    strip4: "Coaching personale",
-    strip5: "Open gym",
-    strip6: "Check nutrizione",
-    strip7: "Piccoli gruppi",
-    introTitle1: "Un sistema, non allenamenti casuali.",
-    introText1: "Le sessioni sono divise per obiettivi: forza, condizionamento, tecnica e recupero. Il progresso non dipende dalla motivazione del giorno.",
-    introTitle2: "Piccoli gruppi, più correzioni.",
-    introText2: "Il coach vede la tecnica, adatta gli esercizi e rende l’allenamento non solo duro, ma utile.",
+    navTrial: "Prima visita",
+    heroKicker: "Lubiana · allenamento funzionale",
+    heroTitle: "Allenati con metodo.",
+    heroLead: "Corsi in piccoli gruppi, allenamento libero e personal training.",
+    heroPrimary: "Vedi gli orari",
+    heroSecondary: "Prima visita",
     programsKicker: "Programmi",
-    programsTitle: "Scegli il tipo di allenamento più adatto al tuo obiettivo.",
+    programsTitle: "Programmi di allenamento",
     program1Tag: "forza",
     program1Title: "VOLT Strength",
     program1Text: "Squat, stacchi, spinte, tecnica controllata e carico progressivo.",
@@ -257,16 +206,9 @@ const translations = {
     modalDuration: "Durata",
     modalLevel: "Intensità",
     modalSchedule: "Vedi orari",
-    modalTrial: "Prenota la prima visita",
-    performanceKicker: "Perché VOLT",
-    performanceTitle: "Progressi misurabili senza caos.",
-    performanceText: "Alla prima visita facciamo un breve check-in: obiettivo, esperienza, mobilità e orario. Poi ricevi un consiglio sui corsi più adatti.",
-    bar1: "Forza",
-    bar2: "Condizione",
-    bar3: "Mobilità",
-    bar4: "Costanza",
+    modalTrial: "Come funziona la prova",
     scheduleKicker: "Orario",
-    scheduleTitle: "Scegli il giorno. Trova il workout.",
+    scheduleTitle: "Orari settimanali",
     dayMon: "Lun",
     dayTue: "Mar",
     dayWed: "Mer",
@@ -277,9 +219,9 @@ const translations = {
     session3: "Stazioni cardio, kettlebell, ritmo e finale.",
     session4: "Flessibilità, respirazione, stabilità e recupero.",
     session5: "Elementi di boxe, footwork e condizionamento.",
-    bookSmall: "Prenota",
+    bookSmall: "Prima visita",
     pricingKicker: "Prezzi",
-    pricingTitle: "Paga il ritmo che usi davvero.",
+    pricingTitle: "Abbonamenti",
     monthly: "Mensile",
     annual: "Annuale -15%",
     plan1Name: "Open Gym",
@@ -295,25 +237,26 @@ const translations = {
     plan3a: "4 sessioni personali",
     plan3b: "Piano individuale",
     plan3c: "Check-in settimanale",
-    choosePlan: "Scegli piano",
     trainerKicker: "Coach",
-    trainerTitle: "L’allenamento non è un test dell’ego. È un processo.",
-    trainerText: "I nostri coach non urlano per far sembrare il workout più duro. Correggono la tecnica, adattano il carico e spiegano perché fai ogni esercizio.",
-    coach1: "forza & mobilità",
-    coach2: "HIIT & condizionamento",
-    coach3: "coaching personale",
+    trainerTitle: "Conosci i trainer",
+    trainerText: "I trainer ti aiutano con la tecnica e adattano il carico al tuo livello.",
+    coach1: "Forza e mobilità",
+    coach2: "HIIT e condizionamento",
+    coach3: "Personal training",
+    coachProfile: "Profilo",
+    coachDemo: "Profilo immaginario",
+    coachIntroLabel: "Il primo allenamento",
+    coachClose: "Chiudi",
+    majaBio: "Maja ha sei anni di esperienza nell’allenamento di forza e mobilità. Aiuta chi inizia a imparare la tecnica dello squat e dello stacco.",
+    majaIntro: "Proverete alcuni movimenti di base per valutare la mobilità, poi sceglierete insieme una variante dello squat e un carico adatto.",
+    lukaBio: "Luka ha cinque anni di esperienza nella conduzione di allenamenti a intervalli. Adatta gli esercizi e il ritmo al tuo livello.",
+    lukaIntro: "Dopo il riscaldamento proverete un breve circuito. Luka adatterà la durata degli intervalli e dei recuperi al tuo ritmo.",
+    ninaBio: "Nina ha sette anni di esperienza nel personal training. Segue chi inizia e chi riprende ad allenarsi dopo una pausa.",
+    ninaIntro: "Parlerete dei tuoi obiettivi e del tempo che hai per allenarti, poi proverete alcuni esercizi per il tuo programma settimanale.",
     contactKicker: "Prima visita",
-    contactTitle: "Vieni a una sessione introduttiva gratuita.",
-    contactText: "Dicci il tuo obiettivo, scegli un orario e saremo pronti. La prima visita include consulenza breve, allenamento e proposta del pacchetto.",
-    callNow: "Chiama ora",
-    sendEmail: "Invia email",
-    openMap: "Apri mappa",
-    address: "Indirizzo",
-    phone: "Telefono",
-    hours: "Aperto",
-    openHours: "Lun–ven 06:00–23:00<br>Sab–dom 08:00–20:00",
-    footerNote: "Sito demo per portfolio. Nome, posizione, telefono e dettagli sono inventati.",
-    mobileCall: "Chiama",
+    contactTitle: "Allenamento di prova gratuito",
+    contactText: "La prima visita comprende un colloquio sui tuoi obiettivi, un allenamento guidato e un programma consigliato.",
+    footerNote: "VOLT è una palestra immaginaria creata per questo sito dimostrativo.",
     mobileSchedule: "Orario",
     mobilePricing: "Piani"
   }
@@ -322,6 +265,12 @@ const translations = {
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
 
+function closeNavigation() {
+  nav.classList.remove("open");
+  document.body.classList.remove("menu-open");
+  navToggle.setAttribute("aria-expanded", "false");
+}
+
 navToggle.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("open");
   document.body.classList.toggle("menu-open", isOpen);
@@ -329,18 +278,12 @@ navToggle.addEventListener("click", () => {
 });
 
 nav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    nav.classList.remove("open");
-    document.body.classList.remove("menu-open");
-    navToggle.setAttribute("aria-expanded", "false");
-  });
+  link.addEventListener("click", closeNavigation);
 });
 
-const strip = document.querySelector(".strip-track");
-if (strip && !strip.dataset.cloned) {
-  strip.innerHTML += strip.innerHTML;
-  strip.dataset.cloned = "true";
-}
+window.matchMedia("(max-width: 1050px)").addEventListener("change", (event) => {
+  if (!event.matches) closeNavigation();
+});
 
 const translatable = document.querySelectorAll("[data-i18n]");
 const langButtons = document.querySelectorAll(".lang-btn");
@@ -353,29 +296,33 @@ function setLanguage(lang) {
   translatable.forEach((element) => {
     const key = element.dataset.i18n;
     if (dictionary[key]) {
-      if (key === "openHours") {
-        element.innerHTML = dictionary[key];
-      } else {
-        element.textContent = dictionary[key];
-      }
+      element.textContent = dictionary[key];
     }
   });
 
   langButtons.forEach((button) => {
-    button.classList.toggle("active", button.dataset.lang === lang);
+    const selected = button.dataset.lang === lang;
+    button.classList.toggle("active", selected);
+    button.setAttribute("aria-pressed", String(selected));
   });
 
   document.documentElement.lang = lang;
-  localStorage.setItem("volt-fitness-lang", lang);
+  try {
+    localStorage.setItem("volt-fitness-lang", lang);
+  } catch {
+    // Language switching still works without stored preferences.
+  }
 }
 
 langButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.lang));
 });
 
-const savedLang = localStorage.getItem("volt-fitness-lang");
-if (savedLang && translations[savedLang]) {
-  setLanguage(savedLang);
+try {
+  const savedLang = localStorage.getItem("volt-fitness-lang");
+  if (Object.hasOwn(translations, savedLang)) setLanguage(savedLang);
+} catch {
+  // Slovenian is available in the original markup.
 }
 
 const dayButtons = document.querySelectorAll(".day");
@@ -390,8 +337,11 @@ function filterDay(day) {
 
 dayButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    dayButtons.forEach((item) => item.classList.remove("active"));
-    button.classList.add("active");
+    dayButtons.forEach((item) => {
+      const selected = item === button;
+      item.classList.toggle("active", selected);
+      item.setAttribute("aria-pressed", String(selected));
+    });
     filterDay(button.dataset.day);
   });
 });
@@ -405,6 +355,7 @@ let yearly = false;
 priceToggle.addEventListener("click", () => {
   yearly = !yearly;
   priceToggle.classList.toggle("yearly", yearly);
+  priceToggle.setAttribute("aria-pressed", String(yearly));
   prices.forEach((price) => {
     price.textContent = yearly ? price.dataset.year : price.dataset.month;
   });
@@ -619,15 +570,10 @@ function openProgramModal(programKey) {
   modalLevel.textContent = data.level;
   modalPoints.innerHTML = data.points.map((point) => `<li>${point}</li>`).join("");
 
-  modal.classList.add("open");
-  modal.setAttribute("aria-hidden", "false");
-  document.body.classList.add("menu-open");
-}
-
-function closeProgramModal() {
-  modal.classList.remove("open");
-  modal.setAttribute("aria-hidden", "true");
-  document.body.classList.remove("menu-open");
+  modal.querySelector(".modal-close").setAttribute("aria-label", {
+    sl: "Zapri", en: "Close", it: "Chiudi"
+  }[currentLang]);
+  modal.showModal();
 }
 
 document.querySelectorAll(".learn-more").forEach((button) => {
@@ -638,11 +584,37 @@ document.querySelectorAll(".learn-more").forEach((button) => {
 });
 
 document.querySelectorAll("[data-close-modal]").forEach((item) => {
-  item.addEventListener("click", closeProgramModal);
+  item.addEventListener("click", () => modal.close());
 });
 
+const coachModal = document.getElementById("coachModal");
+const coachPortrait = document.getElementById("coachPortrait");
+const coachTitle = document.getElementById("coachTitle");
+const coachRole = document.getElementById("coachRole");
+const coachBio = document.getElementById("coachBio");
+const coachIntro = document.getElementById("coachIntro");
+let coachTrigger;
+
+document.querySelectorAll(".coach-trigger").forEach((button) => {
+  button.addEventListener("click", () => {
+    coachTrigger = button;
+    const coach = button.dataset.coach;
+    const dictionary = translations[currentLang];
+
+    coachPortrait.src = `assets/${coach}-portrait.webp`;
+    coachTitle.textContent = button.querySelector("strong").textContent;
+    coachRole.textContent = button.querySelector(".coach-role").textContent;
+    coachBio.textContent = dictionary[`${coach}Bio`];
+    coachIntro.textContent = dictionary[`${coach}Intro`];
+    coachModal.showModal();
+  });
+});
+
+coachModal.querySelector(".modal-backdrop").addEventListener("click", () => coachModal.close());
+coachModal.addEventListener("close", () => coachTrigger?.focus({ preventScroll: true }));
+
 const revealTargets = document.querySelectorAll(
-  ".intro-card, .program-card, .performance-copy, .performance-bars, .schedule-list, .price-card, .trainer-image, .trainer-copy, .contact-card, .contact-details"
+  ".program-card, .schedule-list, .price-card, .trainer-image, .trainer-copy, .contact-card"
 );
 
 revealTargets.forEach((el) => el.classList.add("reveal"));
@@ -662,13 +634,8 @@ const observer = new IntersectionObserver(
 revealTargets.forEach((el) => observer.observe(el));
 
 window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && modal.classList.contains("open")) {
-    closeProgramModal();
-    return;
-  }
   if (event.key === "Escape" && nav.classList.contains("open")) {
-    nav.classList.remove("open");
-    document.body.classList.remove("menu-open");
-    navToggle.setAttribute("aria-expanded", "false");
+    closeNavigation();
+    navToggle.focus();
   }
 });

@@ -1,6 +1,11 @@
 Demo photo source notes
 
-Images are remote Unsplash demo images used only to show visual direction. Replace with client-approved local photos before publishing.
+The venue and trainer profiles are fictional. The three local portrait WebPs were generated for this demo. The remaining images are remote Unsplash photos used to show visual direction.
+
+Portrait brief: natural head-and-shoulders gym portraits, plain training shirts, soft side light and a dark gym background.
+- maja-portrait.webp: Maja, strength and mobility coach by a squat rack, tied-back brown hair.
+- luka-portrait.webp: Luka, HIIT coach by kettlebells, short brown hair and light stubble.
+- nina-portrait.webp: Nina, personal trainer by dumbbells, swept-back dark blonde hair.
 
 hero: https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2100&q=84
 strength: https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1400&q=84

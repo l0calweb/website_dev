@@ -1,6 +1,5 @@
-<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-<rect width="128" height="128" fill="#fff4df"/>
-<rect x="10" y="10" width="108" height="108" fill="#1b1510"/>
-<rect x="18" y="18" width="92" height="92" fill="#fff4df"/>
-<text x="64" y="77" text-anchor="middle" font-family="Georgia, serif" font-size="38" font-weight="900" fill="#d64325">FL</text>
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <rect width="64" height="64" fill="#852a20"/>
+  <path d="M15 49V33a17 17 0 0 1 34 0v16H15Z" fill="none" stroke="#fbf4e8" stroke-width="3"/>
+  <path d="M32 26c0 5-7 8-7 14a7 7 0 0 0 14 0c0-5-5-8-7-14Z" fill="#fbf4e8"/>
 </svg>

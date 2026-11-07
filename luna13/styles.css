@@ -166,10 +166,10 @@ main,
 
 .poster-hero {
   position: relative;
-  min-height: 100svh;
+  min-height: min(760px, 100svh);
   display: grid;
-  align-items: end;
-  padding: 34px 24px 24px;
+  align-content: center;
+  padding: 92px 24px 30px;
   overflow: hidden;
 }
 
@@ -194,12 +194,29 @@ main,
   width: min(100%, 1220px);
   display: grid;
   grid-template-columns: 1fr minmax(260px, 380px);
-  grid-template-rows: auto auto auto;
   gap: 16px 24px;
 }
 
-.poster-code {
+.poster-meta {
   grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.demo-label {
+  margin: 0;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: var(--bg);
+  font-size: .75rem;
+  font-weight: 750;
+}
+
+.poster-code {
+  margin: 0;
   color: var(--gold);
   font-size: clamp(.9rem, 1.3vw, 1.2rem);
   font-weight: 950;
@@ -207,7 +224,6 @@ main,
 }
 
 h1 {
-  grid-row: span 2;
   margin: 0;
   max-width: 940px;
   font-size: clamp(4.8rem, 13vw, 15rem);
@@ -224,7 +240,6 @@ h1 span:nth-child(2) { color: var(--pink); }
 h1 span:nth-child(4) { color: var(--gold); }
 
 .poster-lead {
-  align-self: end;
   margin: 0;
   max-width: 380px;
   color: rgba(246,239,255,.78);
@@ -233,10 +248,21 @@ h1 span:nth-child(4) { color: var(--gold); }
   line-height: 1.65;
 }
 
+.poster-info {
+  align-self: end;
+}
+
+.poster-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
 .square-cta {
   align-self: start;
   width: fit-content;
-  min-height: 54px;
+  min-height: 46px;
   display: inline-grid;
   place-items: center;
   padding: 0 22px;
@@ -248,20 +274,21 @@ h1 span:nth-child(4) { color: var(--gold); }
   font-weight: 950;
   letter-spacing: .16em;
   text-transform: uppercase;
+  font-size: .8rem;
   transition: background .18s ease, color .18s ease;
 }
 
+.square-cta:first-child,
 .square-cta:hover {
   color: #09070f;
   background: var(--gold);
 }
 
 .signal-panel {
-  position: absolute;
+  position: relative;
   z-index: 3;
-  right: 24px;
-  bottom: 24px;
-  width: min(620px, calc(100% - 48px));
+  width: min(100%, 620px);
+  margin-top: 28px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border: 1px solid var(--line);
@@ -270,8 +297,7 @@ h1 span:nth-child(4) { color: var(--gold); }
 }
 
 .signal-panel div {
-  min-height: 104px;
-  padding: 18px;
+  padding: 14px;
   border-right: 1px solid var(--line);
 }
 
@@ -279,7 +305,7 @@ h1 span:nth-child(4) { color: var(--gold); }
 
 .signal-panel small {
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: var(--muted);
   font-family: Inter, system-ui, sans-serif;
   font-size: .68rem;
@@ -295,37 +321,8 @@ h1 span:nth-child(4) { color: var(--gold); }
   line-height: .95;
 }
 
-.manifesto {
-  margin-left: var(--side);
-  border-block: 1px solid var(--line);
-  overflow: hidden;
-  background: var(--pink);
-}
-
-.manifesto-line {
-  width: max-content;
-  display: flex;
-  animation: marquee 24s linear infinite;
-}
-
-.manifesto-line span {
-  padding: 14px 30px;
-  color: #09070f;
-  border-right: 1px solid rgba(9,7,15,.42);
-  font-size: 1.45rem;
-  font-weight: 950;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-@keyframes marquee {
-  to { transform: translateX(-50%); }
-}
-
 .split-story {
-  margin-left: var(--side);
-  min-height: 680px;
+  min-height: 460px;
   display: grid;
   grid-template-columns: .95fr 1.05fr;
   border-bottom: 1px solid var(--line);
@@ -369,7 +366,7 @@ h2 {
 }
 
 .story-text p:not(.section-index),
-.booking-title + p {
+.booking-text {
   max-width: 640px;
   color: var(--muted);
   font-family: Inter, system-ui, sans-serif;
@@ -378,9 +375,8 @@ h2 {
 }
 
 .drinks {
-  margin-left: var(--side);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 430px;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .55fr);
   border-bottom: 1px solid var(--line);
 }
 
@@ -396,10 +392,10 @@ h2 {
 .drink-row {
   width: 100%;
   display: grid;
-  grid-template-columns: 70px minmax(0, 1fr) 160px 90px;
-  gap: 20px;
+  grid-template-columns: 30px minmax(0, 1fr) minmax(0, 120px) 60px;
+  gap: 12px;
   align-items: center;
-  min-height: 96px;
+  min-height: 80px;
   padding: 18px clamp(24px, 4vw, 58px);
   border: 0;
   border-bottom: 1px solid var(--line);
@@ -527,8 +523,13 @@ h2 {
 }
 
 .agenda {
-  margin-left: var(--side);
   border-bottom: 1px solid var(--line);
+}
+
+.agenda-note {
+  margin: 16px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
 }
 
 .agenda-stack {
@@ -538,103 +539,108 @@ h2 {
   border: 1px solid var(--line);
 }
 
-.agenda-stack article {
-  min-height: 320px;
-  padding: 24px;
+.event-card {
+  min-width: 0;
   border-right: 1px solid var(--line);
-  transition: background .18s ease, transform .18s ease;
 }
 
-.agenda-stack article:last-child { border-right: 0; }
+.event-card:last-child { border-right: 0; }
 
-.agenda-stack article:hover {
+.event-card summary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 260px;
+  padding: 24px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.event-card summary::-webkit-details-marker { display: none; }
+
+.event-card summary:hover,
+.event-card[open] summary {
   background: rgba(255,62,165,.10);
 }
 
-.agenda-stack time {
+.event-card summary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+
+.event-card time {
   color: var(--gold);
   font-weight: 950;
   letter-spacing: .16em;
 }
 
-.agenda-stack h3 {
-  margin: 76px 0 12px;
+.event-title {
+  margin: 40px 0 12px;
   font-size: clamp(1.8rem, 3vw, 3.4rem);
-  line-height: .9;
+  line-height: .95;
   letter-spacing: -.06em;
   text-transform: uppercase;
 }
 
-.agenda-stack p {
+.event-summary,
+.event-details {
   color: var(--muted);
-  font-family: Inter, system-ui, sans-serif;
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
-.image-break {
-  position: relative;
-  margin-left: var(--side);
-  height: 70svh;
-  min-height: 520px;
-  overflow: hidden;
-  border-bottom: 1px solid var(--line);
+.event-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: auto;
+  padding-top: 6px;
+  color: var(--gold);
+  font-size: .84rem;
+  font-weight: 800;
 }
 
-.image-break img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(.72) contrast(1.1) brightness(.58);
+.event-toggle::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background:
+    linear-gradient(currentColor, currentColor) center / 12px 2px no-repeat,
+    linear-gradient(currentColor, currentColor) center / 2px 12px no-repeat;
 }
 
-.break-text {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  gap: 0;
-  text-align: center;
+.event-card[open] .event-toggle::before {
+  background-size: 12px 2px, 0 0;
 }
 
-.break-text span {
-  display: block;
-  font-size: clamp(4rem, 14vw, 14rem);
-  font-weight: 950;
-  line-height: .72;
-  letter-spacing: -.1em;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(246,239,255,.82);
-  text-transform: uppercase;
+.event-less,
+.event-card[open] .event-more {
+  display: none;
 }
 
-.break-text span:nth-child(2) {
-  color: var(--pink);
-  -webkit-text-stroke: 0;
+.event-card[open] .event-less {
+  display: inline;
+}
+
+.event-details {
+  margin: 0;
+  padding: 16px 24px 24px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
 }
 
 .booking {
-  margin-left: var(--side);
   display: grid;
-  grid-template-columns: .95fr 1.05fr;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .5fr);
+  align-items: start;
   gap: 30px;
   border-bottom: 1px solid var(--line);
 }
 
-.booking-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.booking-card {
+  padding: 22px;
   border: 1px solid var(--line);
 }
-
-.booking-card {
-  min-height: 170px;
-  padding: 22px;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.booking-card:nth-child(2) { border-right: 0; }
-.booking-card:nth-child(3) { border-bottom: 0; }
 
 .booking-card span {
   display: block;
@@ -652,30 +658,6 @@ h2 {
   line-height: 1.6;
 }
 
-.booking-actions {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.booking-actions a {
-  display: grid;
-  place-items: center;
-  min-height: 58px;
-  border-bottom: 1px solid var(--line);
-  color: var(--ink);
-  font-weight: 950;
-  letter-spacing: .16em;
-  text-transform: uppercase;
-  transition: background .18s ease, color .18s ease;
-}
-
-.booking-actions a:last-child { border-bottom: 0; }
-
-.booking-actions a:hover {
-  color: #09070f;
-  background: var(--gold);
-}
-
 .footer {
   display: flex;
   justify-content: space-between;
@@ -685,10 +667,11 @@ h2 {
   font-family: Inter, system-ui, sans-serif;
 }
 
-.footer span {
-  color: var(--ink);
-  font-weight: 950;
-  letter-spacing: .18em;
+.portfolio-link {
+  color: var(--gold);
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: .2em;
 }
 
 .footer p {
@@ -713,16 +696,7 @@ h2 {
 
   .rail { display: none; }
 
-  main,
-  .footer,
-  .manifesto,
-  .split-story,
-  .drinks,
-  .agenda,
-  .image-break,
-  .booking {
-    margin-left: 0;
-  }
+  html { scroll-padding-top: 82px; }
 
   .mobile-head {
     position: fixed;
@@ -799,12 +773,13 @@ h2 {
   }
 
   .language-switcher {
-    top: 84px;
-    right: 14px;
+    top: 21px;
+    right: 68px;
+    grid-template-columns: repeat(3, 34px);
   }
 
   .poster-hero {
-    padding-top: 150px;
+    padding-top: 106px;
   }
 
   .poster-grid,
@@ -816,14 +791,6 @@ h2 {
 
   .hero-photo-slice {
     inset: 20% 4% 36% 14%;
-  }
-
-  .signal-panel {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    width: 100%;
-    margin-top: 28px;
   }
 
   .story-image {
@@ -842,36 +809,31 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .agenda-stack article {
+  .event-card {
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
 
-  .agenda-stack article:last-child { border-bottom: 0; }
+  .event-card:last-child { border-bottom: 0; }
 
-  .booking-grid {
-    grid-template-columns: 1fr;
+  .event-card summary {
+    min-height: auto;
+    padding: 20px 20px 12px;
   }
 
-  .booking-card,
-  .booking-card:nth-child(2),
-  .booking-card:nth-child(3) {
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
+  .event-title {
+    margin-top: 18px;
+  }
+
+  .event-details {
+    padding-inline: 20px;
   }
 }
 
 @media (max-width: 640px) {
-  .language-switcher {
-    left: 14px;
-    right: 14px;
-    top: 84px;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .poster-hero {
     min-height: auto;
-    padding: 140px 14px 28px;
+    padding: 100px 14px 28px;
   }
 
   .poster-grid {
@@ -883,7 +845,7 @@ h2 {
   }
 
   h2 {
-    font-size: clamp(3rem, 15vw, 5.7rem);
+    font-size: clamp(2.7rem, 12vw, 5.7rem);
   }
 
   .poster-lead {
@@ -895,20 +857,18 @@ h2 {
     clip-path: none;
   }
 
-  .signal-panel {
-    grid-template-columns: 1fr;
-  }
-
   .signal-panel div {
-    min-height: auto;
-    border-right: 0;
-    border-bottom: 1px solid var(--line);
+    padding: 10px 8px;
   }
 
-  .signal-panel div:last-child { border-bottom: 0; }
+  .signal-panel small {
+    font-size: .6rem;
+    letter-spacing: .08em;
+  }
 
-  .manifesto-line span {
-    font-size: 1.15rem;
+  .signal-panel strong {
+    font-size: .88rem;
+    line-height: 1.15;
   }
 
   .story-text,
@@ -923,14 +883,18 @@ h2 {
   }
 
   .drink-row {
-    grid-template-columns: 42px 1fr;
-    gap: 8px 14px;
-    padding: 18px;
+    grid-template-columns: 22px minmax(0, 1fr) auto;
+    gap: 5px 10px;
+    min-height: 64px;
+    padding: 12px 18px;
   }
 
-  .drink-row em,
-  .drink-row b {
+  .drink-row em {
     grid-column: 2;
+  }
+
+  .drink-row b {
+    grid-area: 1 / 3 / span 2;
   }
 
   .drink-info dl {
@@ -943,11 +907,6 @@ h2 {
   }
 
   .drink-info div:last-child { border-bottom: 0; }
-
-  .image-break {
-    height: 58svh;
-    min-height: 430px;
-  }
 
   .footer {
     display: grid;
@@ -974,7 +933,7 @@ body {
 .poster-grid h1,
 h1 {
   max-width: 900px;
-  font-size: clamp(4.2rem, 10.5vw, 11.5rem);
+  font-size: clamp(4.2rem, 8vw, 8.5rem);
   line-height: 0.84;
   letter-spacing: -0.075em;
 }
@@ -992,7 +951,7 @@ h1 span {
 @media (max-width: 1000px) {
   .poster-grid h1,
   h1 {
-    font-size: clamp(4rem, 16vw, 8rem);
+    font-size: clamp(4rem, 12vw, 7rem);
     line-height: 0.86;
     letter-spacing: -0.065em;
   }
@@ -1001,7 +960,7 @@ h1 span {
 @media (max-width: 640px) {
   .poster-grid h1,
   h1 {
-    font-size: clamp(3.3rem, 17vw, 5.8rem);
+    font-size: clamp(3rem, 14.5vw, 5.6rem);
     line-height: 0.9;
     letter-spacing: -0.045em;
   }
